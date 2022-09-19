@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite-SportsGame]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="SportsGame(failed)">
+    <parameter name="categoryNumber" value="2"/>
+    <parameter name="javaVersion" value="JDK/JSE 17"/>
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="vendorName" value="S128 SPORT VND"/>
+    <parameter name="user" value="Jordan"/>
+    <parameter name="userIDFE" value="qctestergame001"/>
+    <parameter name="platform" value="Web"/>
+    <parameter name="url" value="https://wltestmembersite.the777888.com"/>
+    <parameter name="sportsmaster" value="vnd"/>
+    <groups>
+      <run>
+        <exclude name="login"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="runners.SportsGame">
+        <methods>
+          <include name="logCaseStatus"/>
+          <include name="startReportAndSetProperty"/>
+          <include name="stopDriver"/>
+          <include name="selectGame"/>
+        </methods>
+      </class> <!-- runners.SportsGame -->
+    </classes>
+  </test> <!-- SportsGame(failed) -->
+</suite> <!-- Failed suite [Suite-SportsGame] -->

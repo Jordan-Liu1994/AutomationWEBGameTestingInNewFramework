@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite-SGT]" guice-stage="DEVELOPMENT">
+  <parameter name="categoryNumber" value="2"/>
+  <parameter name="vendorName" value="S128 SPORT VND"/>
+  <test thread-count="5" name="Sports Game Test(failed)">
+    <groups>
+      <run>
+        <exclude name="login"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="runners.SportsGame">
+        <methods>
+          <include name="logCaseStatus"/>
+          <include name="selectCateogry"/>
+          <include name="startReportAndSetProperty"/>
+          <include name="stopDriver"/>
+          <include name="selectVendor"/>
+          <include name="goToSite"/>
+        </methods>
+      </class> <!-- runners.SportsGame -->
+    </classes>
+  </test> <!-- Sports Game Test(failed) -->
+</suite> <!-- Failed suite [Suite-SGT] -->
