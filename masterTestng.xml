@@ -15,8 +15,8 @@
 
 	<parameter name="sportsMaster" value="ibc"></parameter>
 	<parameter name="sportsCategoryNumber" value="2"></parameter>
-	<parameter name="VNDVendor" value="S128 SPORT VND"></parameter>
-	<parameter name="IBCVendor" value="IBC SPORTS MYR"></parameter>
+	<parameter name="VNDVendor" value="S128 SPORTS"></parameter>
+	<parameter name="IBCVendor" value="IBC SPORTS"></parameter>
 
 	<!-- <suite-files> <suite-file path="GameTestNG\sportsTestng.xml"></suite-file> 
 		</suite-files> -->
@@ -29,21 +29,21 @@
 
 	<parameter name="pokerMaster" value="all"></parameter>
 	<parameter name="pokerCategoryNumber" value="6"></parameter>
-	<parameter name="VNDVendor" value="V8 Poker VND"></parameter>
+	<parameter name="VNDVendor" value="V8 Poker"></parameter>
 
 	<!-- <suite-files> <suite-file path="GameTestNG\pokerTestng.xml"></suite-file> 
 		</suite-files> -->
 
 	<parameter name="lotteryMaster" value="all"></parameter>
 	<parameter name="lotteryCategoryNumber" value="7"></parameter>
-	<parameter name="SGWINVendor" value="SG-WIN 彩票"></parameter>
+	<parameter name="SGWINVendor" value="SG-WIN"></parameter>
 
 	<!-- <suite-files> <suite-file path="GameTestNG\lotteryTestng.xml"></suite-file> 
 		</suite-files> -->
 
 	<parameter name="eSportsMaster" value="all"></parameter>
 	<parameter name="eSportsCategoryNumber" value="8"></parameter>
-	<parameter name="IBCVendor" value="IBC ESPORTS MYR"></parameter>
+	<parameter name="IBCVendor" value="IBC ESPORTS"></parameter>
 
 	<!-- <suite-files> <suite-file path="GameTestNG\eSportsTestng.xml"></suite-file> 
 		</suite-files> -->
@@ -57,7 +57,7 @@
 	<!-- <suite-files> <suite-file path="GameTestNG\fishTestng.xml"></suite-file> 
 		</suite-files> -->
 
-	<parameter name="slotsMaster" value="pgsoft"></parameter>
+	<parameter name="slotsMaster" value="all"></parameter>
 	<parameter name="slotsCategoryNumber" value="3"></parameter>
 	<parameter name="PGSOFTSlotsGame1" value="麻将胡了"></parameter>
 	<parameter name="PGSOFTSlotsGame2" value="后羿射日"></parameter>
@@ -73,7 +73,7 @@
 	<parameter name="CQ9SlotsGame2" value="WIP"></parameter>
 	<parameter name="CQ9SlotsGame3" value="WIP"></parameter>
 
-	<parameter name="LKVendor" value="LK SLOT MYR"></parameter>
+	<parameter name="LKVendor" value="LK"></parameter>
 	<parameter name="LKSlotsGame1" value="WIP"></parameter>
 	<parameter name="LKSlotsGame2" value="WIP"></parameter>
 	<parameter name="LKSlotsGame3" value="WIP"></parameter>

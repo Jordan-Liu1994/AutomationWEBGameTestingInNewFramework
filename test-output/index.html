@@ -119,7 +119,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite_SGT__0_" title="runners.SlotsGame" class="method navigator-link" hash-for-method="selectVendor(pgsoft, LK SLOT MYR, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, 2000)">selectVendor(pgsoft, LK SLOT MYR, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, 2000)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite_SGT__0_" title="runners.SlotsGame" class="method navigator-link" hash-for-method="selectVendor(all, LK, PTTCG, CQ9, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, 2000)">selectVendor(all, LK, PTTCG, CQ9, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, 2000)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite_SGT__0_ -->
@@ -168,10 +168,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="selectVendor(pgsoft, LK SLOT MYR, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, 2000)">
-                  </a> <!-- selectVendor(pgsoft, LK SLOT MYR, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, 2000) -->
+                  <a name="selectVendor(all, LK, PTTCG, CQ9, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, 2000)">
+                  </a> <!-- selectVendor(all, LK, PTTCG, CQ9, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, 2000) -->
                   <span class="method-name">selectVendor</span>
-                  <span class="parameters">(pgsoft, LK SLOT MYR, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, 2000)</span>
+                  <span class="parameters">(all, LK, PTTCG, CQ9, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, 2000)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,41 +187,43 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite-SGT&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;sportsCategoryNumber&quot; value=&quot;2&quot;/&gt;
-  &lt;parameter name=&quot;CQ9SLotsGame1&quot; value=&quot;WIP&quot;/&gt;
-  &lt;parameter name=&quot;CQ9SLotsGame3&quot; value=&quot;WIP&quot;/&gt;
-  &lt;parameter name=&quot;CQ9SLotsGame2&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;javaVersion&quot; value=&quot;JDK/JSE 17&quot;/&gt;
   &lt;parameter name=&quot;pokerCategoryNumber&quot; value=&quot;6&quot;/&gt;
   &lt;parameter name=&quot;platform&quot; value=&quot;Web&quot;/&gt;
   &lt;parameter name=&quot;liveCategoryNumber&quot; value=&quot;4&quot;/&gt;
-  &lt;parameter name=&quot;PTTCGSLotsGame1&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;PTTCGVendor&quot; value=&quot;PTTCG&quot;/&gt;
+  &lt;parameter name=&quot;PGSOFTSlotsGame2&quot; value=&quot;后羿射日&quot;/&gt;
+  &lt;parameter name=&quot;PGSOFTSlotsGame3&quot; value=&quot;拳霸&quot;/&gt;
+  &lt;parameter name=&quot;CQ9SlotsGame3&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;sportsMaster&quot; value=&quot;ibc&quot;/&gt;
-  &lt;parameter name=&quot;PTTCGSLotsGame2&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;CQ9SlotsGame2&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;eSportsMaster&quot; value=&quot;all&quot;/&gt;
+  &lt;parameter name=&quot;CQ9SlotsGame1&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+  &lt;parameter name=&quot;PGSOFTSlotsGame1&quot; value=&quot;麻将胡了&quot;/&gt;
+  &lt;parameter name=&quot;PTTCGSlotsGame3&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;CQ9Vendor&quot; value=&quot;CQ9&quot;/&gt;
+  &lt;parameter name=&quot;LKSlotsGame1&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;LKSlotsGame2&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;LKSlotsGame3&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;slotsCategoryNumber&quot; value=&quot;3&quot;/&gt;
-  &lt;parameter name=&quot;PGSOFTSLotsGame2&quot; value=&quot;后羿射日&quot;/&gt;
-  &lt;parameter name=&quot;PGSOFTSLotsGame3&quot; value=&quot;拳霸&quot;/&gt;
   &lt;parameter name=&quot;IBCVendor&quot; value=&quot;IBC ESPORTS MYR&quot;/&gt;
-  &lt;parameter name=&quot;PGSOFTSLotsGame1&quot; value=&quot;麻将胡了&quot;/&gt;
-  &lt;parameter name=&quot;PTTCGSLotsGame3&quot; value=&quot;WIP&quot;/&gt;
-  &lt;parameter name=&quot;LKSLotsGame2&quot; value=&quot;WIP&quot;/&gt;
-  &lt;parameter name=&quot;LKSLotsGame3&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;PTTCGSlotsGame1&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;PTTCGSlotsGame2&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://wltestmembersite.the777888.com&quot;/&gt;
   &lt;parameter name=&quot;eSportsCategoryNumber&quot; value=&quot;8&quot;/&gt;
   &lt;parameter name=&quot;fishMaster&quot; value=&quot;all&quot;/&gt;
-  &lt;parameter name=&quot;LKSLotsGame1&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;VNDVendor&quot; value=&quot;V8 Poker VND&quot;/&gt;
   &lt;parameter name=&quot;fishCategoryNumber&quot; value=&quot;5&quot;/&gt;
   &lt;parameter name=&quot;liveMaster&quot; value=&quot;all&quot;/&gt;
   &lt;parameter name=&quot;pokerMaster&quot; value=&quot;all&quot;/&gt;
   &lt;parameter name=&quot;lotteryMaster&quot; value=&quot;all&quot;/&gt;
   &lt;parameter name=&quot;SGWINVendor&quot; value=&quot;SG-WIN 彩票&quot;/&gt;
-  &lt;parameter name=&quot;LKVendor&quot; value=&quot;LK SLOT MYR&quot;/&gt;
+  &lt;parameter name=&quot;LKVendor&quot; value=&quot;LK&quot;/&gt;
   &lt;parameter name=&quot;lotteryCategoryNumber&quot; value=&quot;7&quot;/&gt;
   &lt;parameter name=&quot;time&quot; value=&quot;2000&quot;/&gt;
   &lt;parameter name=&quot;CQ9FishGame2&quot; value=&quot;皇金渔场&quot;/&gt;
-  &lt;parameter name=&quot;slotsMaster&quot; value=&quot;pgsoft&quot;/&gt;
+  &lt;parameter name=&quot;slotsMaster&quot; value=&quot;all&quot;/&gt;
   &lt;parameter name=&quot;user&quot; value=&quot;Jordan&quot;/&gt;
   &lt;parameter name=&quot;userIDFE&quot; value=&quot;qctestergame001&quot;/&gt;
   &lt;parameter name=&quot;CQ9FishGame1&quot; value=&quot;一炮捕鱼&quot;/&gt;
@@ -243,41 +245,43 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite-SGT (0)&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;sportsCategoryNumber&quot; value=&quot;2&quot;/&gt;
-  &lt;parameter name=&quot;CQ9SLotsGame1&quot; value=&quot;WIP&quot;/&gt;
-  &lt;parameter name=&quot;CQ9SLotsGame3&quot; value=&quot;WIP&quot;/&gt;
-  &lt;parameter name=&quot;CQ9SLotsGame2&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;javaVersion&quot; value=&quot;JDK/JSE 17&quot;/&gt;
   &lt;parameter name=&quot;pokerCategoryNumber&quot; value=&quot;6&quot;/&gt;
   &lt;parameter name=&quot;platform&quot; value=&quot;Web&quot;/&gt;
   &lt;parameter name=&quot;liveCategoryNumber&quot; value=&quot;4&quot;/&gt;
-  &lt;parameter name=&quot;PTTCGSLotsGame1&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;PTTCGVendor&quot; value=&quot;PTTCG&quot;/&gt;
+  &lt;parameter name=&quot;PGSOFTSlotsGame2&quot; value=&quot;后羿射日&quot;/&gt;
+  &lt;parameter name=&quot;PGSOFTSlotsGame3&quot; value=&quot;拳霸&quot;/&gt;
+  &lt;parameter name=&quot;CQ9SlotsGame3&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;sportsMaster&quot; value=&quot;ibc&quot;/&gt;
-  &lt;parameter name=&quot;PTTCGSLotsGame2&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;CQ9SlotsGame2&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;eSportsMaster&quot; value=&quot;all&quot;/&gt;
+  &lt;parameter name=&quot;CQ9SlotsGame1&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+  &lt;parameter name=&quot;PGSOFTSlotsGame1&quot; value=&quot;麻将胡了&quot;/&gt;
+  &lt;parameter name=&quot;PTTCGSlotsGame3&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;CQ9Vendor&quot; value=&quot;CQ9&quot;/&gt;
+  &lt;parameter name=&quot;LKSlotsGame1&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;LKSlotsGame2&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;LKSlotsGame3&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;slotsCategoryNumber&quot; value=&quot;3&quot;/&gt;
-  &lt;parameter name=&quot;PGSOFTSLotsGame2&quot; value=&quot;后羿射日&quot;/&gt;
-  &lt;parameter name=&quot;PGSOFTSLotsGame3&quot; value=&quot;拳霸&quot;/&gt;
   &lt;parameter name=&quot;IBCVendor&quot; value=&quot;IBC ESPORTS MYR&quot;/&gt;
-  &lt;parameter name=&quot;PGSOFTSLotsGame1&quot; value=&quot;麻将胡了&quot;/&gt;
-  &lt;parameter name=&quot;PTTCGSLotsGame3&quot; value=&quot;WIP&quot;/&gt;
-  &lt;parameter name=&quot;LKSLotsGame2&quot; value=&quot;WIP&quot;/&gt;
-  &lt;parameter name=&quot;LKSLotsGame3&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;PTTCGSlotsGame1&quot; value=&quot;WIP&quot;/&gt;
+  &lt;parameter name=&quot;PTTCGSlotsGame2&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://wltestmembersite.the777888.com&quot;/&gt;
   &lt;parameter name=&quot;eSportsCategoryNumber&quot; value=&quot;8&quot;/&gt;
   &lt;parameter name=&quot;fishMaster&quot; value=&quot;all&quot;/&gt;
-  &lt;parameter name=&quot;LKSLotsGame1&quot; value=&quot;WIP&quot;/&gt;
   &lt;parameter name=&quot;VNDVendor&quot; value=&quot;V8 Poker VND&quot;/&gt;
   &lt;parameter name=&quot;fishCategoryNumber&quot; value=&quot;5&quot;/&gt;
   &lt;parameter name=&quot;liveMaster&quot; value=&quot;all&quot;/&gt;
   &lt;parameter name=&quot;pokerMaster&quot; value=&quot;all&quot;/&gt;
   &lt;parameter name=&quot;lotteryMaster&quot; value=&quot;all&quot;/&gt;
   &lt;parameter name=&quot;SGWINVendor&quot; value=&quot;SG-WIN 彩票&quot;/&gt;
-  &lt;parameter name=&quot;LKVendor&quot; value=&quot;LK SLOT MYR&quot;/&gt;
+  &lt;parameter name=&quot;LKVendor&quot; value=&quot;LK&quot;/&gt;
   &lt;parameter name=&quot;lotteryCategoryNumber&quot; value=&quot;7&quot;/&gt;
   &lt;parameter name=&quot;time&quot; value=&quot;2000&quot;/&gt;
   &lt;parameter name=&quot;CQ9FishGame2&quot; value=&quot;皇金渔场&quot;/&gt;
-  &lt;parameter name=&quot;slotsMaster&quot; value=&quot;pgsoft&quot;/&gt;
+  &lt;parameter name=&quot;slotsMaster&quot; value=&quot;all&quot;/&gt;
   &lt;parameter name=&quot;user&quot; value=&quot;Jordan&quot;/&gt;
   &lt;parameter name=&quot;userIDFE&quot; value=&quot;qctestergame001&quot;/&gt;
   &lt;parameter name=&quot;CQ9FishGame1&quot; value=&quot;一炮捕鱼&quot;/&gt;
@@ -377,24 +381,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'selectVendor')
 data.setCell(0, 2, 'runners.SlotsGame')
-data.setCell(0, 3, 14530);
+data.setCell(0, 3, 62072);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'login')
 data.setCell(1, 2, 'runners.SlotsGame')
-data.setCell(1, 3, 7374);
+data.setCell(1, 3, 7081);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'goToSite')
 data.setCell(2, 2, 'runners.SlotsGame')
-data.setCell(2, 3, 1432);
+data.setCell(2, 3, 1325);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'selectCategory')
 data.setCell(3, 2, 'runners.SlotsGame')
-data.setCell(3, 3, 884);
+data.setCell(3, 3, 840);
 window.suiteTableData['Suite_SGT__0_']= { tableData: data, tableDiv: 'times-div-Suite_SGT__0_'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite_SGT__0_">
               </div> <!-- times-div-Suite_SGT__0_ -->
             </div> <!-- times-div -->
@@ -448,39 +452,39 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">goToSite(https://wltestmembersite.the777888.com)</span>
-                <span class="method-start">2102 ms</span>
+                <span class="method-start">1899 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logCaseStatus([TestResult name=goToSite status=SUCCESS method=SlotsGame.goToSite(java.lang.String)[pri:0, instance...)</span>
-                <span class="method-start">3544 ms</span>
+                <span class="method-start">3228 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">login(qctestergame001)</span>
-                <span class="method-start">3554 ms</span>
+                <span class="method-start">3237 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logCaseStatus([TestResult name=login status=SUCCESS method=SlotsGame.login(java.lang.String)[pri:1, instance:runne...)</span>
-                <span class="method-start">10929 ms</span>
+                <span class="method-start">10319 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">selectCategory(3)</span>
-                <span class="method-start">10929 ms</span>
+                <span class="method-start">10323 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logCaseStatus([TestResult name=selectCategory status=SUCCESS method=SlotsGame.selectCategory(java.lang.String)[pri...)</span>
-                <span class="method-start">11817 ms</span>
+                <span class="method-start">11164 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">selectVendor(pgsoft, LK SLOT MYR, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, 2000)</span>
-                <span class="method-start">11819 ms</span>
+                <span class="method-name">selectVendor(all, LK, PTTCG, CQ9, 麻将胡了, 后羿射日, 拳霸, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, WIP, 2000)</span>
+                <span class="method-start">11168 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logCaseStatus([TestResult name=selectVendor status=SUCCESS method=SlotsGame.selectVendor(java.lang.String,java.lan...)</span>
-                <span class="method-start">26352 ms</span>
+                <span class="method-start">73242 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">stopDriver</span>
-                <span class="method-start">26357 ms</span>
+                <span class="method-start">73243 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
