@@ -10,50 +10,13 @@
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite-SGT</th></tr>
 <tr><th colspan="8">Suite-SGT (0)</th></tr>
-<tr><td><a href="#t0">Sports Game Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">14,305</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Slots Game Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">28,143</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite-SGT</th></tr></tbody><tbody><tr><th colspan="4">Suite-SGT (0)</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Sports Game Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">runners.SportsGame</td><td><a href="#m0">logCaseStatus</a></td><td rowspan="1">1663561744076</td><td rowspan="1">7</td></tr><tr><th colspan="4">Sports Game Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runners.SportsGame</td><td><a href="#m1">selectVendor</a></td><td rowspan="1">1663561740612</td><td rowspan="1">3460</td></tr><tr><th colspan="4">Sports Game Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">runners.SportsGame</td><td><a href="#m2">stopDriver</a></td><td rowspan="1">1663561744086</td><td rowspan="1">-1663561744086</td></tr><tr><th colspan="4">Sports Game Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">runners.SportsGame</td><td><a href="#m3">goToSite</a></td><td rowspan="1">1663561731236</td><td rowspan="1">1532</td></tr><tr class="passedeven"><td><a href="#m4">login</a></td><td rowspan="1">1663561732792</td><td rowspan="1">6858</td></tr><tr class="passedeven"><td><a href="#m5">selectCategory</a></td><td rowspan="1">1663561739654</td><td rowspan="1">957</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite-SGT</th></tr></tbody><tbody><tr><th colspan="4">Suite-SGT (0)</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Slots Game Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">runners.SlotsGame</td><td><a href="#m0">goToSite</a></td><td rowspan="1">1663571365570</td><td rowspan="1">1432</td></tr><tr class="passedeven"><td><a href="#m1">login</a></td><td rowspan="1">1663571367022</td><td rowspan="1">7374</td></tr><tr class="passedeven"><td><a href="#m2">selectCategory</a></td><td rowspan="1">1663571374397</td><td rowspan="1">884</td></tr><tr class="passedeven"><td><a href="#m3">selectVendor</a></td><td rowspan="1">1663571375287</td><td rowspan="1">14530</td></tr></tbody>
 </table>
-<h2>Sports Game Test</h2><h3 id="m0">runners.SportsGame#logCaseStatus</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=selectVendor status=FAILURE method=SportsGame.selectVendor(java.lang.String,java.lang.String,java.lang.String,int)[pri:3, instance:runners.SportsGame@393671df] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;CDWILT004&apos;, ip: &apos;192.168.88.107&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\JORDAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 48e4f6f4ce965dfc3eb2d863e091389f
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
-	at baseUtilities.TakeScreenShot.takeSnapShot(TakeScreenShot.java:19)
-	at baseUtilities.ResultListener.logCaseStatus(ResultListener.java:21)
-	at runners.SportsGame.logCaseStatus(SportsGame.java:81)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 38 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">runners.SportsGame#selectVendor</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>ibc</td><td>S128 SPORT VND</td><td>IBC SPORTS MYR</td><td>2000</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: invalid session id
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;CDWILT004&apos;, ip: &apos;192.168.88.107&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\JORDAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 48e4f6f4ce965dfc3eb2d863e091389f
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:903)
-	at baseUtilities.IterateNextWindows.iterateToGameWindow(IterateNextWindows.java:29)
-	at functions.SportsCategory.openIBCSportsGame(SportsCategory.java:70)
-	at runners.SportsGame.selectVendor(SportsGame.java:75)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">runners.SportsGame#stopDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">runners.SportsGame#goToSite</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>https://wltestmembersite.the777888.com</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">runners.SportsGame#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>qctestergame001</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">runners.SportsGame#selectCategory</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>2</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Slots Game Test</h2><h3 id="m0">runners.SlotsGame#goToSite</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>https://wltestmembersite.the777888.com</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">runners.SlotsGame#login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>qctestergame001</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">runners.SlotsGame#selectCategory</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>3</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">runners.SlotsGame#selectVendor</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th></tr><tr class="param stripe"><td>pgsoft</td><td>LK SLOT MYR</td><td>麻将胡了</td><td>后羿射日</td><td>拳霸</td><td>WIP</td><td>WIP</td><td>WIP</td><td>2000</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

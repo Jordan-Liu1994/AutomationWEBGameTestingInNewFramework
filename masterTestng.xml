@@ -18,7 +18,67 @@
 	<parameter name="VNDVendor" value="S128 SPORT VND"></parameter>
 	<parameter name="IBCVendor" value="IBC SPORTS MYR"></parameter>
 
+	<!-- <suite-files> <suite-file path="GameTestNG\sportsTestng.xml"></suite-file> 
+		</suite-files> -->
+
+	<parameter name="liveMaster" value="all"></parameter>
+	<parameter name="liveCategoryNumber" value="4"></parameter>
+
+	<!-- <suite-files> <suite-file path="GameTestNG\liveTestng.xml"></suite-file> 
+		</suite-files> -->
+
+	<parameter name="pokerMaster" value="all"></parameter>
+	<parameter name="pokerCategoryNumber" value="6"></parameter>
+	<parameter name="VNDVendor" value="V8 Poker VND"></parameter>
+
+	<!-- <suite-files> <suite-file path="GameTestNG\pokerTestng.xml"></suite-file> 
+		</suite-files> -->
+
+	<parameter name="lotteryMaster" value="all"></parameter>
+	<parameter name="lotteryCategoryNumber" value="7"></parameter>
+	<parameter name="SGWINVendor" value="SG-WIN 彩票"></parameter>
+
+	<!-- <suite-files> <suite-file path="GameTestNG\lotteryTestng.xml"></suite-file> 
+		</suite-files> -->
+
+	<parameter name="eSportsMaster" value="all"></parameter>
+	<parameter name="eSportsCategoryNumber" value="8"></parameter>
+	<parameter name="IBCVendor" value="IBC ESPORTS MYR"></parameter>
+
+	<!-- <suite-files> <suite-file path="GameTestNG\eSportsTestng.xml"></suite-file> 
+		</suite-files> -->
+
+	<parameter name="fishMaster" value="all"></parameter>
+	<parameter name="fishCategoryNumber" value="5"></parameter>
+	<parameter name="CQ9FishGame1" value="一炮捕鱼"></parameter>
+	<parameter name="CQ9FishGame2" value="皇金渔场"></parameter>
+	<parameter name="CQ9FishGame3" value="英雄捕鱼"></parameter>
+
+	<!-- <suite-files> <suite-file path="GameTestNG\fishTestng.xml"></suite-file> 
+		</suite-files> -->
+
+	<parameter name="slotsMaster" value="pgsoft"></parameter>
+	<parameter name="slotsCategoryNumber" value="3"></parameter>
+	<parameter name="PGSOFTSlotsGame1" value="麻将胡了"></parameter>
+	<parameter name="PGSOFTSlotsGame2" value="后羿射日"></parameter>
+	<parameter name="PGSOFTSlotsGame3" value="拳霸"></parameter>
+
+	<parameter name="PTTCGVendor" value="PTTCG"></parameter>
+	<parameter name="PTTCGSlotsGame1" value="WIP"></parameter>
+	<parameter name="PTTCGSlotsGame2" value="WIP"></parameter>
+	<parameter name="PTTCGSlotsGame3" value="WIP"></parameter>
+
+	<parameter name="CQ9Vendor" value="CQ9"></parameter>
+	<parameter name="CQ9SlotsGame1" value="WIP"></parameter>
+	<parameter name="CQ9SlotsGame2" value="WIP"></parameter>
+	<parameter name="CQ9SlotsGame3" value="WIP"></parameter>
+
+	<parameter name="LKVendor" value="LK SLOT MYR"></parameter>
+	<parameter name="LKSlotsGame1" value="WIP"></parameter>
+	<parameter name="LKSlotsGame2" value="WIP"></parameter>
+	<parameter name="LKSlotsGame3" value="WIP"></parameter>
+
 	<suite-files>
-		<suite-file path="sportsTestng.xml"></suite-file>
+		<suite-file path="GameTestNG\slotsTestng.xml"></suite-file>
 	</suite-files>
 </suite> <!-- Suite -->

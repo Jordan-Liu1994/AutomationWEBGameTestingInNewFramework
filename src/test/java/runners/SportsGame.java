@@ -2,20 +2,17 @@ package runners;
 
 import javax.security.auth.login.FailedLoginException;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import baseUtilities.ReportCreate;
 import baseUtilities.ResultListener;
 import baseUtilities.VariableContainer;
 import functions.LoginFE;
-import functions.SportsCategory;
+import functions.CategoryVendorAndGame;
 
 public class SportsGame extends VariableContainer {
 
@@ -23,7 +20,7 @@ public class SportsGame extends VariableContainer {
 	ResultListener rListener = new ResultListener();
 
 	LoginFE log = new LoginFE();
-	SportsCategory sportCat = new SportsCategory();
+	CategoryVendorAndGame sportCat = new CategoryVendorAndGame();
 
 	private static String reportName = "SportsGame";
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-SGT">
+	<test thread-count="5" name="Slots Game Test">
+		<!-- <groups>
+			<run>
+				<exclude name="login"></exclude>
+			</run>
+		</groups> -->
+		<classes>
+			<class name="runners.SlotsGame"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite-LGT]" guice-stage="DEVELOPMENT">
+  <parameter name="sportsCategoryNumber" value="2"/>
+  <parameter name="IBCVendor" value="IBC SPORTS MYR"/>
+  <parameter name="javaVersion" value="JDK/JSE 17"/>
+  <parameter name="pokerCategoryNumber" value="6"/>
+  <parameter name="platform" value="Web"/>
+  <parameter name="url" value="https://wltestmembersite.the777888.com"/>
+  <parameter name="liveCategoryNumber" value="4"/>
+  <parameter name="VNDVendor" value="V8 Poker VND"/>
+  <parameter name="liveMaster" value="all"/>
+  <parameter name="pokerMaster" value="all"/>
+  <parameter name="lotteryMaster" value="all"/>
+  <parameter name="sportsMaster" value="ibc"/>
+  <parameter name="SGWINVendor" value="SG-WIN 彩票"/>
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="lotteryCategoryNumber" value="7"/>
+  <parameter name="time" value="2000"/>
+  <parameter name="user" value="Jordan"/>
+  <parameter name="userIDFE" value="qctestergame001"/>
+  <test thread-count="5" name="Lottery Game Test(failed)">
+    <classes>
+      <class name="runners.LotteryGame">
+        <methods>
+          <include name="logCaseStatus"/>
+          <include name="startReportAndSetProperty"/>
+          <include name="stopDriver"/>
+          <include name="selectVendor" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- runners.LotteryGame -->
+    </classes>
+  </test> <!-- Lottery Game Test(failed) -->
+</suite> <!-- Failed suite [Suite-LGT] -->
