@@ -1,56 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite-FGT]" guice-stage="DEVELOPMENT">
-  <parameter name="sportsCategoryNumber" value="2"/>
-  <parameter name="CQ9SLotsGame1" value="WIP"/>
-  <parameter name="CQ9SLotsGame3" value="WIP"/>
-  <parameter name="CQ9SLotsGame2" value="WIP"/>
-  <parameter name="javaVersion" value="JDK/JSE 17"/>
-  <parameter name="pokerCategoryNumber" value="6"/>
-  <parameter name="platform" value="Web"/>
-  <parameter name="liveCategoryNumber" value="4"/>
-  <parameter name="PTTCGSLotsGame1" value="WIP"/>
-  <parameter name="sportsMaster" value="ibc"/>
-  <parameter name="PTTCGSLotsGame2" value="WIP"/>
-  <parameter name="eSportsMaster" value="all"/>
-  <parameter name="browser" value="Chrome"/>
-  <parameter name="slotsCategoryNumber" value="3"/>
-  <parameter name="PGSOFTSLotsGame2" value="后羿射日"/>
-  <parameter name="PGSOFTSLotsGame3" value="拳霸"/>
-  <parameter name="IBCVendor" value="IBC ESPORTS MYR"/>
-  <parameter name="PGSOFTSLotsGame1" value="麻将胡了"/>
-  <parameter name="PTTCGSLotsGame3" value="WIP"/>
-  <parameter name="LKSLotsGame2" value="WIP"/>
-  <parameter name="LKSLotsGame3" value="WIP"/>
-  <parameter name="url" value="https://wltestmembersite.the777888.com"/>
-  <parameter name="eSportsCategoryNumber" value="8"/>
-  <parameter name="fishMaster" value="all"/>
-  <parameter name="LKSLotsGame1" value="WIP"/>
-  <parameter name="VNDVendor" value="V8 Poker VND"/>
-  <parameter name="fishCategoryNumber" value="5"/>
-  <parameter name="liveMaster" value="all"/>
-  <parameter name="pokerMaster" value="all"/>
-  <parameter name="lotteryMaster" value="all"/>
-  <parameter name="SGWINVendor" value="SG-WIN 彩票"/>
-  <parameter name="LKVendor" value="LK SLOT MYR"/>
-  <parameter name="lotteryCategoryNumber" value="7"/>
-  <parameter name="time" value="2000"/>
-  <parameter name="CQ9FishGame2" value="皇金渔场"/>
-  <parameter name="slotsMaster" value="all"/>
-  <parameter name="user" value="Jordan"/>
-  <parameter name="userIDFE" value="qctestergame001"/>
-  <parameter name="CQ9FishGame1" value="一炮捕鱼"/>
-  <parameter name="CQ9FishGame3" value="英雄捕鱼"/>
-  <test thread-count="5" name="Fish Game Test(failed)">
-    <classes>
-      <class name="runners.FishGame">
-        <methods>
-          <include name="startReportAndSetProperty"/>
-          <include name="logCaseStatus"/>
-          <include name="stopDriver"/>
-          <include name="selectVendor" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- runners.FishGame -->
-    </classes>
-  </test> <!-- Fish Game Test(failed) -->
+	<parameter name="javaVersion" value="JDK/JSE 17" />
+	<parameter name="platform" value="Web" />
+	<parameter name="PTTCGVendor" value="PTTCG" />
+	<parameter name="PGSOFTSlotsGame2" value="后羿射日" />
+	<parameter name="PGSOFTSlotsGame3" value="拳霸" />
+	<parameter name="CQ9SlotsGame3" value="WIP" />
+	<parameter name="CQ9SlotsGame2" value="WIP" />
+	<parameter name="CQ9SlotsGame1" value="WIP" />
+	<parameter name="browser" value="Chrome" />
+	<parameter name="PGSOFTSlotsGame1" value="麻将胡了" />
+	<parameter name="PTTCGSlotsGame3" value="WIP" />
+	<parameter name="CQ9Vendor" value="CQ9" />
+	<parameter name="LKSlotsGame1" value="WIP" />
+	<parameter name="LKSlotsGame2" value="WIP" />
+	<parameter name="LKSlotsGame3" value="WIP" />
+	<parameter name="slotsCategoryNumber" value="3" />
+	<parameter name="PTTCGSlotsGame1" value="WIP" />
+	<parameter name="PTTCGSlotsGame2" value="WIP" />
+	<parameter name="url"
+		value="https://wltestmembersite.the777888.com" />
+	<parameter name="fishMaster" value="all" />
+	<parameter name="fishCategoryNumber" value="5" />
+	<parameter name="LKVendor" value="LK" />
+	<parameter name="time" value="20000" />
+	<parameter name="CQ9FishGame2" value="皇金渔场" />
+	<parameter name="slotsMaster" value="all" />
+	<parameter name="user" value="Jordan" />
+	<parameter name="userIDFE" value="qctestergame001" />
+	<parameter name="CQ9FishGame1" value="一炮捕鱼" />
+	<parameter name="CQ9FishGame3" value="英雄捕鱼" />
+	<test thread-count="5" name="Fish Game Test(failed)">
+		<classes>
+			<class name="runners.FishGame">
+				<methods>
+					<include name="startReportAndSetProperty" />
+					<include name="logCaseStatus" />
+					<include name="stopDriver" />
+					<include name="selectVendor" invocation-numbers="0" />
+				</methods>
+			</class> <!-- runners.FishGame -->
+		</classes>
+	</test> <!-- Fish Game Test(failed) -->
 </suite> <!-- Failed suite [Suite-FGT] -->

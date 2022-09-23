@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-CQ9SLots">
+
+	<parameter name="platform" value="Web"></parameter>
+	<parameter name="browser" value="Chrome"></parameter>
+	<parameter name="javaVersion" value="JDK/JSE 17"></parameter>
+	<parameter name="user" value="Jordan"></parameter>
+	<parameter name="url"
+		value="https://wltestmembersite.the777888.com"></parameter>
+	<parameter name="userIDFE" value="qctestergame001"></parameter>
+
+	<!-- This is the index of the category, might change depending on position 
+		arrangement of categories -->
+	<parameter name="slotsCategoryNumber" value="3"></parameter>
+	<parameter name="numberOfGamesToTest" value="1"></parameter>
+	<parameter name="pastDate" value="0"></parameter>
+
+	<!-- IMPORTANT -->
+	<parameter name="slotsVendor" value="CQ9"></parameter>
+
+	<parameter name="vendorCQ9" value="CQ9"></parameter>
+	<parameter name="cq9Game1" value="跳起来"></parameter>
+	<parameter name="cq9Game2" value="武圣"></parameter>
+	<parameter name="cq9Game3" value="宙斯"></parameter>
+
+	<test thread-count="3" name="CQ9SLots">
+		<classes>
+			<class name="runnerSlots002.CQ9SlotsGame"></class>
+		</classes>
+	</test>
+</suite>

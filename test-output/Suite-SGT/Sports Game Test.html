@@ -1,12 +1,17 @@
 <html>
 <head>
-<title>TestNG:  Sports Game Test</title>
+<title>TestNG: Sports Game Test</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
-.log { display: none;} 
-.stack-trace { display: none;} 
+.log {
+	display: none;
+}
+
+.stack-trace {
+	display: none;
+}
 </style>
 <script type="text/javascript">
 <!--
@@ -53,35 +58,58 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Sports Game Test</h2><table border='1' align="center">
-<tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/1</td>
-</tr><tr>
-<td>Started on:</td><td>Mon Sep 19 11:03:30 SGT 2022</td>
-</tr>
-<tr><td>Total time:</td><td>0 seconds (87 ms)</td>
-</tr><tr>
-<td>Included groups:</td><td></td>
-</tr><tr>
-<td>Excluded groups:</td><td>login </td>
-</tr>
-</table><p/>
-<small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runners.SportsGame.startReportAndSetProperty()'><b>startReportAndSetProperty</b><br>Test class: runners.SportsGame</td>
-<td><div><pre>org.testng.TestNGException: 
+	<h2 align='center'>Sports Game Test</h2>
+	<table border='1' align="center">
+		<tr>
+			<td>Tests passed/Failed/Skipped:</td>
+			<td>0/2/1</td>
+		</tr>
+		<tr>
+			<td>Started on:</td>
+			<td>Mon Sep 19 11:03:30 SGT 2022</td>
+		</tr>
+		<tr>
+			<td>Total time:</td>
+			<td>0 seconds (87 ms)</td>
+		</tr>
+		<tr>
+			<td>Included groups:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Excluded groups:</td>
+			<td>login</td>
+		</tr>
+	</table>
+	<p />
+	<small><i>(Hover the method name to see the test class
+			name)</i></small>
+	<p />
+	<table width='100%' border='1' class='invocation-failed'>
+		<tr>
+			<td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='runners.SportsGame.startReportAndSetProperty()'><b>startReportAndSetProperty</b><br>Test
+				class: runners.SportsGame</td>
+			<td><div>
+					<pre>org.testng.TestNGException: 
 Parameter &apos;platform&apos; is required by BeforeClass on method startReportAndSetProperty but has not been marked @Optional or defined
 in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1791267914", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1791267914'><pre>org.testng.TestNGException: 
+... Removed 22 stack frames</pre>
+				</div>
+				<a href='#'
+				onClick='toggleBox("stack-trace1791267914", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace1791267914'>
+					<pre>org.testng.TestNGException: 
 Parameter &apos;platform&apos; is required by BeforeClass on method startReportAndSetProperty but has not been marked @Optional or defined
 in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:270)
@@ -107,43 +135,64 @@ in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>-1663556610</td>
-<td>runners.SportsGame@7cc586a8</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runners.SportsGame.stopDriver()'><b>stopDriver</b><br>Test class: runners.SportsGame</td>
-<td></td>
-<td>-1663556610</td>
-<td>runners.SportsGame@7cc586a8</td></tr>
-<tr>
-<td title='runners.SportsGame.logCaseStatus()'><b>logCaseStatus</b><br>Test class: runners.SportsGame</td>
-<td></td>
-<td>-1663556610</td>
-<td>runners.SportsGame@7cc586a8</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runners.SportsGame.selectVendor()'><b>selectVendor</b><br>Test class: runners.SportsGame</td>
-<td><div><pre>org.testng.TestNGException: 
+</pre>
+				</div></td>
+			<td>-1663556610</td>
+			<td>runners.SportsGame@7cc586a8</td>
+		</tr>
+	</table>
+	<p>
+	<table width='100%' border='1' class='invocation-skipped'>
+		<tr>
+			<td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='runners.SportsGame.stopDriver()'><b>stopDriver</b><br>Test
+				class: runners.SportsGame</td>
+			<td></td>
+			<td>-1663556610</td>
+			<td>runners.SportsGame@7cc586a8</td>
+		</tr>
+		<tr>
+			<td title='runners.SportsGame.logCaseStatus()'><b>logCaseStatus</b><br>Test
+				class: runners.SportsGame</td>
+			<td></td>
+			<td>-1663556610</td>
+			<td>runners.SportsGame@7cc586a8</td>
+		</tr>
+	</table>
+	<p>
+	<table width='100%' border='1' class='invocation-failed'>
+		<tr>
+			<td colspan='4' align='center'><b>FAILED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='runners.SportsGame.selectVendor()'><b>selectVendor</b><br>Test
+				class: runners.SportsGame</td>
+			<td><div>
+					<pre>org.testng.TestNGException: 
 Parameter &apos;sportsmaster&apos; is required by @Test on method selectVendor but has not been marked @Optional or defined
 in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1442077586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1442077586'><pre>org.testng.TestNGException: 
+... Removed 26 stack frames</pre>
+				</div>
+				<a href='#'
+				onClick='toggleBox("stack-trace1442077586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace1442077586'>
+					<pre>org.testng.TestNGException: 
 Parameter &apos;sportsmaster&apos; is required by @Test on method selectVendor but has not been marked @Optional or defined
 in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:270)
@@ -173,17 +222,26 @@ in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>runners.SportsGame@7cc586a8</td></tr>
-<tr>
-<td title='runners.SportsGame.goToSite()'><b>goToSite</b><br>Test class: runners.SportsGame</td>
-<td><div><pre>org.testng.TestNGException: 
+</pre>
+				</div></td>
+			<td>0</td>
+			<td>runners.SportsGame@7cc586a8</td>
+		</tr>
+		<tr>
+			<td title='runners.SportsGame.goToSite()'><b>goToSite</b><br>Test
+				class: runners.SportsGame</td>
+			<td><div>
+					<pre>org.testng.TestNGException: 
 Parameter &apos;url&apos; is required by @Test on method goToSite but has not been marked @Optional or defined
 in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1691858720", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1691858720'><pre>org.testng.TestNGException: 
+... Removed 26 stack frames</pre>
+				</div>
+				<a href='#'
+				onClick='toggleBox("stack-trace1691858720", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace1691858720'>
+					<pre>org.testng.TestNGException: 
 Parameter &apos;url&apos; is required by @Test on method goToSite but has not been marked @Optional or defined
 in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:270)
@@ -213,25 +271,38 @@ in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>runners.SportsGame@7cc586a8</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runners.SportsGame.selectCateogry()'><b>selectCateogry</b><br>Test class: runners.SportsGame<br>Parameters: 2</td>
-<td><div><pre>org.testng.TestNGException: 
+</pre>
+				</div></td>
+			<td>0</td>
+			<td>runners.SportsGame@7cc586a8</td>
+		</tr>
+	</table>
+	<p>
+	<table width='100%' border='1' class='invocation-skipped'>
+		<tr>
+			<td colspan='4' align='center'><b>SKIPPED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='runners.SportsGame.selectCateogry()'><b>selectCateogry</b><br>Test
+				class: runners.SportsGame<br>Parameters: 2</td>
+			<td><div>
+					<pre>org.testng.TestNGException: 
 Parameter &apos;platform&apos; is required by BeforeClass on method startReportAndSetProperty but has not been marked @Optional or defined
 in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace880533231", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace880533231'><pre>org.testng.TestNGException: 
+... Removed 22 stack frames</pre>
+				</div>
+				<a href='#'
+				onClick='toggleBox("stack-trace880533231", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace880533231'>
+					<pre>org.testng.TestNGException: 
 Parameter &apos;platform&apos; is required by BeforeClass on method startReportAndSetProperty but has not been marked @Optional or defined
 in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:270)
@@ -257,9 +328,12 @@ in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\sportsTestng.xml
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>runners.SportsGame@7cc586a8</td></tr>
-</table><p>
+</pre>
+				</div></td>
+			<td>0</td>
+			<td>runners.SportsGame@7cc586a8</td>
+		</tr>
+	</table>
+	<p>
 </body>
 </html>

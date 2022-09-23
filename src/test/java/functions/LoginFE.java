@@ -17,12 +17,10 @@ public class LoginFE extends VariableContainer {
 
 	ReportCreate rCreate = new ReportCreate();
 
-	WebDriverWait wait;
-	String fail;
-	String skip;
-
 	public void loginOptionButton() throws FailedLoginException {
+		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		wait = new WebDriverWait(bDriver.getDriver(), 15);
+
 		WebElement loginOptionButton = bDriver.getDriver().findElement(By.id("header_login"));
 		wait.until(ExpectedConditions.elementToBeClickable(loginOptionButton));
 
@@ -38,7 +36,9 @@ public class LoginFE extends VariableContainer {
 	}
 
 	public void setUserID(String userID) throws FailedLoginException {
+		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		wait = new WebDriverWait(bDriver.getDriver(), 15);
+
 		WebElement setUserID = bDriver.getDriver().findElement(By.id("username"));
 		wait.until(ExpectedConditions.visibilityOf(setUserID));
 
@@ -54,6 +54,8 @@ public class LoginFE extends VariableContainer {
 	}
 
 	public void setPassword(String password) throws FailedLoginException {
+		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
 		WebElement setPassword = bDriver.getDriver().findElement(By.id("password"));
 
 		if (setPassword.isDisplayed()) {
@@ -68,6 +70,8 @@ public class LoginFE extends VariableContainer {
 	}
 
 	public void setCaptcha(String captcha) throws FailedLoginException {
+		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
 		try {
 			WebElement setCaptcha = bDriver.getDriver().findElement(By.id("captcha_code"));
 
@@ -76,14 +80,19 @@ public class LoginFE extends VariableContainer {
 				setCaptcha.clear();
 				setCaptcha.sendKeys(captcha);
 				rCreate.getExtentTest().info(captcha + keyIn + setCaptcha_Text);
+			} else {
+				fail = "setCaptcha failed";
+				rCreate.getExtentTest().warning(fail);
 			}
 		} catch (NoSuchElementException e) {
 			skip = "setCaptcha skipped";
 			rCreate.getExtentTest().skip(skip);
 		}
 	}
-	
-	public void setSliderCaptcha() throws FailedLoginException {		
+
+	public void setSliderCaptcha() throws FailedLoginException, InterruptedException {
+		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
 		try {
 			Actions builder = new Actions(bDriver.getDriver());
 			WebElement setSliderCaptcha = bDriver.getDriver().findElement(By.xpath("//div[@class='gt_slider_knob gt_show']"));
@@ -91,6 +100,13 @@ public class LoginFE extends VariableContainer {
 			if (setSliderCaptcha.isDisplayed()) {
 				builder.moveToElement(setSliderCaptcha).clickAndHold().moveByOffset(100, 0).release().build().perform();
 				rCreate.getExtentTest().info("Dragged captcha slider to the right by 100 pixels");
+
+				Thread.sleep(1000);
+				builder.moveByOffset(300, 0).build().perform();
+				Thread.sleep(2500);
+			} else {
+				fail = "setSliderCaptcha failed";
+				rCreate.getExtentTest().warning(fail);
 			}
 		} catch (NoSuchElementException e) {
 			skip = "setSliderCaptcha skipped";
@@ -99,12 +115,10 @@ public class LoginFE extends VariableContainer {
 	}
 
 	public void selectLoginButton() throws FailedLoginException, InterruptedException {
-		Thread.sleep(1000);
-		Actions builder = new Actions(bDriver.getDriver());
-		builder.moveByOffset(300, 0).build().perform();
-		Thread.sleep(2000);
+		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
 		WebElement selectLoginButton = bDriver.getDriver().findElement(By.id("login_popup_btn"));
-		
+
 		if (selectLoginButton.isEnabled()) {
 			String selectLoginButtonText = selectLoginButton.getText();
 			selectLoginButton.click();
@@ -118,6 +132,7 @@ public class LoginFE extends VariableContainer {
 
 	public void verifyLogIn(String userID) throws FailedLoginException, InterruptedException {
 		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
 		WebElement userIDName = bDriver.getDriver().findElement(By.xpath("(//a[contains(text(),'" + userID + "')])[1]"));
 
 		if (userIDName.isDisplayed()) {

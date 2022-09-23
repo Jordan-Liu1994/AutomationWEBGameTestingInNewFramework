@@ -1,19 +1,11 @@
 package functions;
 
 import java.util.ArrayList;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import javax.security.auth.login.FailedLoginException;
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotInteractableException;
-import org.openqa.selenium.ElementNotVisibleException;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.SkipException;
-
 import baseUtilities.IterateNextWindows;
 import baseUtilities.ReportCreate;
 import baseUtilities.VariableContainer;
@@ -21,22 +13,21 @@ import baseUtilities.VariableContainer;
 public class CategoryVendorAndGame extends VariableContainer {
 
 	ReportCreate rCreate = new ReportCreate();
-	IterateNextWindows INW = new IterateNextWindows();
+	IterateNextWindows iterateNW = new IterateNextWindows();
+	PerformBetting performB = new PerformBetting();
+	InGameBetTimezoneAndBetDetails inGameBTZABD = new InGameBetTimezoneAndBetDetails();
 
-	String fail;
-	String res;
-	String skip;
-	String parentWindowHandle;
-	Set<String> nextWindowHandle;
 	Actions builder;
 
-	public void selectCategory(String categoryNumber) throws FailedLoginException {
+//	FOR ALL CATEGORIES
+	public void selectCategory(String categoryNumber) throws FailedLoginException, InterruptedException {
 		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		WebElement selectCategory = bDriver.getDriver().findElement(By.xpath("(//div[@class='header_menu_item'])[" + categoryNumber + "]"));
 
 		if (selectCategory.isDisplayed()) {
 			String selectCategoryText = selectCategory.getText();
-			selectCategory.click();
+			Actions builder = new Actions(bDriver.getDriver());
+			builder.moveToElement(selectCategory).click().build().perform();
 			rCreate.getExtentTest().info("Clicked " + selectCategoryText);
 		} else {
 			fail = "selectCategory failed";
@@ -45,219 +36,126 @@ public class CategoryVendorAndGame extends VariableContainer {
 		}
 	}
 
-	public void openVNDSportsGame(String VNDVendor, int time) throws Exception {
-		parentWindowHandle = bDriver.getDriver().getWindowHandle();
-
-		try {
-			WebElement openVNDSportsGame = bDriver.getDriver().findElement(By.xpath("(//div[contains(text(),'" + VNDVendor + "')])[2]"));
-			if (openVNDSportsGame.isDisplayed()) {
-				openVNDSportsGame.click();
-				rCreate.getExtentTest().info("Clicked " + VNDVendor);
-
-				INW.iterateToGameWindow(time, VNDVendor, parentWindowHandle);
-			} else {
-				fail = "openVNDSportsGame failed";
-				rCreate.getExtentTest().fail(fail);
-			}
-		} catch (ElementNotVisibleException | NoSuchElementException e) {
-			skip = "Under maintenance";
-			rCreate.getExtentTest().skip(VNDVendor + skip);
-			System.out.println(e);
-		}
-	}
-
-	public void openIBCSportsGame(String IBCVendor, int time) throws Exception {
-		parentWindowHandle = bDriver.getDriver().getWindowHandle();
-
-		try {
-			WebElement openIBCSportsGame = bDriver.getDriver().findElement(By.xpath("(//div[contains(text(),'" + IBCVendor + "')])[1]"));
-			if (openIBCSportsGame.isDisplayed()) {
-				openIBCSportsGame.click();
-				rCreate.getExtentTest().info("Clicked " + IBCVendor);
-
-				INW.iterateToGameWindow(time, IBCVendor, parentWindowHandle);
-			} else {
-				fail = "openIBCSportsGame failed";
-				rCreate.getExtentTest().fail(fail);
-			}
-		} catch (ElementNotVisibleException | NoSuchElementException e) {
-			skip = "Under maintenance";
-			rCreate.getExtentTest().skip(IBCVendor + skip);
-			System.out.println(e);
-		}
-	}
-
-	public void openVNDPokerGame(String VNDVendor, int time) throws Exception {
-		parentWindowHandle = bDriver.getDriver().getWindowHandle();
-
-		try {
-			WebElement openVNDPokerGame = bDriver.getDriver().findElement(By.xpath("(//div[contains(text(),'" + VNDVendor + "')])[2]"));
-			if (openVNDPokerGame.isDisplayed()) {
-				openVNDPokerGame.click();
-				rCreate.getExtentTest().info("Clicked " + VNDVendor);
-
-				INW.iterateToGameWindow(time, VNDVendor, parentWindowHandle);
-			} else {
-				fail = "openVNDPokerGame failed";
-				rCreate.getExtentTest().fail(fail);
-			}
-		} catch (ElementNotVisibleException | NoSuchElementException e) {
-			skip = "Under maintenance";
-			rCreate.getExtentTest().skip(VNDVendor + skip);
-			System.out.println(e);
-		}
-	}
-
-	public void openSGWINLotteryGame(String SGWINVendor, int time) throws Exception {
-		parentWindowHandle = bDriver.getDriver().getWindowHandle();
-
-		try {
-			WebElement openSGWINLotteryGame = bDriver.getDriver().findElement(By.xpath("(//div[contains(text(),'" + SGWINVendor + "')])[1]"));
-			if (openSGWINLotteryGame.isDisplayed()) {
-				openSGWINLotteryGame.click();
-				rCreate.getExtentTest().info("Clicked " + SGWINVendor);
-
-				INW.iterateToGameWindow(time, SGWINVendor, parentWindowHandle);
-			} else {
-				fail = "openSGWINLotteryGame failed";
-				rCreate.getExtentTest().fail(fail);
-			}
-		} catch (ElementNotVisibleException | NoSuchElementException e) {
-			skip = "Under maintenance";
-			rCreate.getExtentTest().skip(SGWINVendor + skip);
-			System.out.println(e);
-		}
-	}
-
-	public void openIBCESportsGame(String IBCVendor, int time) throws Exception {
-		parentWindowHandle = bDriver.getDriver().getWindowHandle();
-
-		try {
-			WebElement openSGWINLotteryGame = bDriver.getDriver().findElement(By.xpath("(//div[contains(text(),'" + IBCVendor + "')])[1]"));
-			if (openSGWINLotteryGame.isDisplayed()) {
-				openSGWINLotteryGame.click();
-				rCreate.getExtentTest().info("Clicked " + IBCVendor);
-
-				INW.iterateToGameWindow(time, IBCVendor, parentWindowHandle);
-			} else {
-				fail = "openIBCESportsGame failed";
-				rCreate.getExtentTest().fail(fail);
-			}
-		} catch (ElementNotVisibleException | NoSuchElementException e) {
-			skip = "Under maintenance";
-			rCreate.getExtentTest().skip(IBCVendor + skip);
-			System.out.println(e);
-		}
-	}
-
-	public void selectMasterFishVendor() throws Exception {
+//	ONLY FOR SLOTS
+	public void selectVendors(String vendorName) throws FailedLoginException {
 		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		WebElement selectMasterFishVendor = bDriver.getDriver().findElement(By.xpath("//div[@class='content_block active']"));
-		if (selectMasterFishVendor.isDisplayed()) {
-			String selectMasterFishVendorText = selectMasterFishVendor.getText();
-			rCreate.getExtentTest().info(selectMasterFishVendorText + " already selected");
+		WebElement selectVendors = bDriver.getDriver().findElement(By.xpath("//div[contains(@class,'content_block')][normalize-space()='" + vendorName + "']"));
+
+		if (selectVendors.isDisplayed()) {
+			String selectVendorsText = selectVendors.getText();
+			Actions builder = new Actions(bDriver.getDriver());
+			builder.moveToElement(selectVendors).click().build().perform();
+			rCreate.getExtentTest().info("Clicked " + selectVendorsText);
 		} else {
-			fail = "selectMasterFishVendor failed";
+			fail = "selectVendors failed";
 			rCreate.getExtentTest().fail(fail);
 		}
 	}
 
-	public void openAllListedCQ9FishGame(String CQ9FishGame1, String CQ9FishGame2, String CQ9FishGame3, int time) throws Exception {
-		parentWindowHandle = bDriver.getDriver().getWindowHandle();
-
-		try {
-			ArrayList<String> arraylist = new ArrayList<String>();
-			arraylist.add(CQ9FishGame1);
-			arraylist.add(CQ9FishGame2);
-			arraylist.add(CQ9FishGame3);
-
-			for (int i = 0; i <= 2; i++) {
-				bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-				String array = arraylist.get(i);
-
-				WebElement openAllListedCQ9FishGame = bDriver.getDriver().findElement(By.xpath("//div[contains(text(),'" + array + "')]"));
-				if (openAllListedCQ9FishGame.isDisplayed()) {
-					openAllListedCQ9FishGame.click();
-					rCreate.getExtentTest().info("Clicked " + array);
-
-					INW.iterateToGameWindow(time, array, parentWindowHandle);
-				} else {
-					fail = "openCQ9FishGame failed";
-					rCreate.getExtentTest().fail(fail);
-				}
-			}
-		} catch (ElementNotVisibleException | NoSuchElementException e) {
-			skip = "Under maintenance";
-			rCreate.getExtentTest().skip("Vendor " + skip);
-			System.out.println(e);
-		}
-	}
-
-	public void selectMasterSlotsVendor() throws Exception {
+	public void selectFishVendors() throws FailedLoginException {
 		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		WebElement selectMasterSlotsVendor = bDriver.getDriver().findElement(By.xpath("//div[@class='content_block active']"));
-		if (selectMasterSlotsVendor.isDisplayed()) {
-			String selectMasterSlotsVendorText = selectMasterSlotsVendor.getText();
-			rCreate.getExtentTest().info(selectMasterSlotsVendorText + " already selected");
+		WebElement selectFishVendors = bDriver.getDriver().findElement(By.xpath("//div[@class='content_block active']//span"));
+
+		if (selectFishVendors.isDisplayed()) {
+			String selectFishVendorsText = selectFishVendors.getText();
+			Actions builder = new Actions(bDriver.getDriver());
+			builder.moveToElement(selectFishVendors).click().build().perform();
+			rCreate.getExtentTest().info("Clicked " + selectFishVendorsText);
 		} else {
-			fail = "selectMasterSlotsVendor failed";
+			fail = "selectVendors failed";
 			rCreate.getExtentTest().fail(fail);
 		}
 	}
 
-	public void selectSubSlotsVendor(String vendorName) throws Exception {
-		try {
+	public void selectSlotsGame(String slotsVendor, String gameName1, String gameName2, int numberOfGamesToTest, String pastDate) throws Exception {
+		parentWindow = bDriver.getDriver().getWindowHandle();
+
+		ArrayList<String> gameList = new ArrayList<String>();
+		gameList.add(gameName1);
+		gameList.add(gameName2);
+
+		for (int i = 0; i <= numberOfGamesToTest; i++) {
 			bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-			JavascriptExecutor js = (JavascriptExecutor) bDriver.getDriver();
-			js.executeScript("window.scrollBy(0,-1000)");
-			Thread.sleep(500);
+			String game = gameList.get(i);
+			WebElement selectSlotsGame = bDriver.getDriver().findElement(By.xpath("(//div[@class='title'][contains(text(),'" + game + "')])[1]"));
 
-			WebElement selectSubSlotsVendor = bDriver.getDriver().findElement(By.xpath("//div[normalize-space()='" + vendorName + "']//span"));
-			if (selectSubSlotsVendor.isDisplayed()) {
-				builder = new Actions(bDriver.getDriver());
-				Action act = builder.moveToElement(selectSubSlotsVendor).build();
-				act.perform();
-				selectSubSlotsVendor.click();
-				rCreate.getExtentTest().info("Clicked " + vendorName);
+			if (selectSlotsGame.isDisplayed()) {
+				Actions builder = new Actions(bDriver.getDriver());
+				builder.moveToElement(selectSlotsGame).click().build().perform();
+
+				iterateNW.iterateToGameWindow();
+				iterateNW.maximizeWindow();
+				Thread.sleep(10000);
+				performB.performSlotsBetting();
+				Thread.sleep(5000);
+				iterateNW.iterateToBetRecordWindow();
+				Thread.sleep(2500);
+				inGameBTZABD.selectTimeZoneOption();
+				inGameBTZABD.selectTimezone();
+				if (pastDate.equalsIgnoreCase("0")) {
+					inGameBTZABD.selectTodayDate();
+				} else {
+					inGameBTZABD.selectCustomDate();
+					inGameBTZABD.selectPast6Days(pastDate);
+				}
+				inGameBTZABD.goToBetDetails(game);
+				Thread.sleep(2500);
+				iterateNW.iterateToBetDetailsWindow();
+				Thread.sleep(2500);
+				iterateNW.screenShotFinalWindow(game);
+				iterateNW.closeNewWindow();
+				Thread.sleep(2500);
+				iterateNW.backToMainWindow(parentWindow);
 			} else {
-				fail = "selectSubSlotsVendor failed";
+				fail = "selectSlotsGame failed";
 				rCreate.getExtentTest().fail(fail);
 			}
-		} catch (ElementNotInteractableException | NoSuchElementException e) {
-			skip = "Under maintenance";
-			rCreate.getExtentTest().skip(vendorName + skip);
-			System.out.println(e);
 		}
 	}
 
-	public void openAllListedSlotsGame(String slotsGame1, String slotsGame2, String slotsGame3, int time) throws Exception {
-		parentWindowHandle = bDriver.getDriver().getWindowHandle();
+	public void selectFishGame(String slotsVendor, String gameName1, String gameName2, int numberOfGamesToTest, String pastDate) throws Exception {
+		parentWindow = bDriver.getDriver().getWindowHandle();
 
-		try {
-			ArrayList<String> arraylist = new ArrayList<String>();
-			arraylist.add(slotsGame1);
-			arraylist.add(slotsGame2);
-			arraylist.add(slotsGame3);
+		ArrayList<String> gameList = new ArrayList<String>();
+		gameList.add(gameName1);
+		gameList.add(gameName2);
 
-			for (int i = 0; i <= 2; i++) {
-				bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-				String array = arraylist.get(i);
+		for (int i = 0; i <= numberOfGamesToTest; i++) {
+			bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+			String game = gameList.get(i);
+			WebElement selectFishGame = bDriver.getDriver().findElement(By.xpath("//div[contains(text(),'" + game + "')]"));
 
-				WebElement openAllListedCQ9FishGame = bDriver.getDriver().findElement(By.xpath("//div[contains(text(),'" + array + "')]"));
-				if (openAllListedCQ9FishGame.isDisplayed()) {
-					openAllListedCQ9FishGame.click();
-					rCreate.getExtentTest().info("Clicked " + array);
+			if (selectFishGame.isDisplayed()) {
+				Actions builder = new Actions(bDriver.getDriver());
+				builder.moveToElement(selectFishGame).click().build().perform();
 
-					INW.iterateToGameWindow(time, array, parentWindowHandle);
+				iterateNW.iterateToGameWindow();
+				iterateNW.maximizeWindow();
+				Thread.sleep(10000);
+				performB.performFishBetting();
+				Thread.sleep(2500);
+				iterateNW.iterateToBetRecordWindow();
+				Thread.sleep(2500);
+				inGameBTZABD.selectTimeZoneOption();
+				inGameBTZABD.selectTimezone();
+				if (pastDate.equalsIgnoreCase("0")) {
+					inGameBTZABD.selectTodayDate();
 				} else {
-					fail = "openAllListedSlotsGame failed";
-					rCreate.getExtentTest().fail(fail);
+					inGameBTZABD.selectCustomDate();
+					inGameBTZABD.selectPast6Days(pastDate);
 				}
+				inGameBTZABD.goToBetDetails(game);
+				Thread.sleep(2500);
+				iterateNW.iterateToBetDetailsWindow();
+				Thread.sleep(2500);
+				iterateNW.screenShotFinalWindow(game);
+				iterateNW.closeNewWindow();
+				Thread.sleep(2500);
+				iterateNW.backToMainWindow(parentWindow);
+			} else {
+				fail = "selectSlotsGame failed";
+				rCreate.getExtentTest().fail(fail);
 			}
-		} catch (ElementNotVisibleException | NoSuchElementException e) {
-			skip = "Under maintenance";
-			rCreate.getExtentTest().skip("Vendor " + skip);
-			System.out.println(e);
 		}
 	}
 }

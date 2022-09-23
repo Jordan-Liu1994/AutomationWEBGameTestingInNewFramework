@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite-PGSOFTSLots">
+
+	<parameter name="platform" value="Web"></parameter>
+	<parameter name="browser" value="Chrome"></parameter>
+	<parameter name="javaVersion" value="JDK/JSE 17"></parameter>
+	<parameter name="user" value="Jordan"></parameter>
+	<parameter name="url"
+		value="https://wltestmembersite.the777888.com"></parameter>
+	<parameter name="userIDFE" value="qctestergame001"></parameter>
+
+	<!-- This is the index of the category, might change depending on position 
+		arrangement of categories -->
+	<parameter name="slotsCategoryNumber" value="3"></parameter>
+	<parameter name="numberOfGamesToTest" value="1"></parameter>
+	<parameter name="pastDate" value="0"></parameter>
+
+	<!-- IMPORTANT -->
+	<parameter name="slotsVendor" value="PGSOFT"></parameter>
+
+	<parameter name="vendorPGSOFT" value="PG SOFT"></parameter>
+	<parameter name="pgsoftGame1" value="宝石侠"></parameter>
+	<parameter name="pgsoftGame2" value="巫师之书"></parameter>
+	<parameter name="pgsoftGame3" value="金猪报财"></parameter>
+
+	<test thread-count="3" name="PGSOFTSLots">
+		<classes>
+			<class name="runnerSlots002.PGSOFTSlotsGame"></class>
+		</classes>
+	</test>
+</suite>

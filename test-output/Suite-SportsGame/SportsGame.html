@@ -1,12 +1,17 @@
 <html>
 <head>
-<title>TestNG:  SportsGame</title>
+<title>TestNG: SportsGame</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
-.log { display: none;} 
-.stack-trace { display: none;} 
+.log {
+	display: none;
+}
+
+.stack-trace {
+	display: none;
+}
 </style>
 <script type="text/javascript">
 <!--
@@ -53,35 +58,58 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>SportsGame</h2><table border='1' align="center">
-<tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
-</tr><tr>
-<td>Started on:</td><td>Mon Sep 19 10:53:22 SGT 2022</td>
-</tr>
-<tr><td>Total time:</td><td>4 seconds (4103 ms)</td>
-</tr><tr>
-<td>Included groups:</td><td></td>
-</tr><tr>
-<td>Excluded groups:</td><td>login </td>
-</tr>
-</table><p/>
-<small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runners.SportsGame.selectGame()'><b>selectGame</b><br>Test class: runners.SportsGame</td>
-<td><div><pre>org.testng.TestNGException: 
+	<h2 align='center'>SportsGame</h2>
+	<table border='1' align="center">
+		<tr>
+			<td>Tests passed/Failed/Skipped:</td>
+			<td>1/1/0</td>
+		</tr>
+		<tr>
+			<td>Started on:</td>
+			<td>Mon Sep 19 10:53:22 SGT 2022</td>
+		</tr>
+		<tr>
+			<td>Total time:</td>
+			<td>4 seconds (4103 ms)</td>
+		</tr>
+		<tr>
+			<td>Included groups:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Excluded groups:</td>
+			<td>login</td>
+		</tr>
+	</table>
+	<p />
+	<small><i>(Hover the method name to see the test class
+			name)</i></small>
+	<p />
+	<table width='100%' border='1' class='invocation-failed'>
+		<tr>
+			<td colspan='4' align='center'><b>FAILED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='runners.SportsGame.selectGame()'><b>selectGame</b><br>Test
+				class: runners.SportsGame</td>
+			<td><div>
+					<pre>org.testng.TestNGException: 
 Parameter &apos;sportsMaster&apos; is required by @Test on method selectGame but has not been marked @Optional or defined
 in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\masterTestng.xml
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace701681793", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace701681793'><pre>org.testng.TestNGException: 
+... Removed 26 stack frames</pre>
+				</div>
+				<a href='#'
+				onClick='toggleBox("stack-trace701681793", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace701681793'>
+					<pre>org.testng.TestNGException: 
 Parameter &apos;sportsMaster&apos; is required by @Test on method selectGame but has not been marked @Optional or defined
 in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\masterTestng.xml
 	at org.testng.internal.Parameters.createParams(Parameters.java:270)
@@ -111,22 +139,32 @@ in D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\masterTestng.xml
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>runners.SportsGame@55b7a4e0</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runners.SportsGame.goToSite()'><b>goToSite</b><br>Test class: runners.SportsGame<br>Parameters: https://wltestmembersite.the777888.com</td>
-<td></td>
-<td>1</td>
-<td>runners.SportsGame@55b7a4e0</td></tr>
-</table><p>
+</pre>
+				</div></td>
+			<td>0</td>
+			<td>runners.SportsGame@55b7a4e0</td>
+		</tr>
+	</table>
+	<p>
+	<table width='100%' border='1' class='invocation-passed'>
+		<tr>
+			<td colspan='4' align='center'><b>PASSED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='runners.SportsGame.goToSite()'><b>goToSite</b><br>Test
+				class: runners.SportsGame<br>Parameters:
+				https://wltestmembersite.the777888.com</td>
+			<td></td>
+			<td>1</td>
+			<td>runners.SportsGame@55b7a4e0</td>
+		</tr>
+	</table>
+	<p>
 </body>
 </html>

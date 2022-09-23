@@ -19,7 +19,6 @@ public class TakeScreenShot extends VariableContainer {
 		File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
 		File DestFile = new File(pathOfSS + fileWithPath);
 		FileUtils.copyFile(SrcFile, DestFile);
-
 	}
 
 	public String screenShotPathExtent() {
