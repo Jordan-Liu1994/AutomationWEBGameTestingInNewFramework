@@ -57,23 +57,23 @@ public class CQ9FishGame extends VariableContainer {
 		categoryVAG.selectCategory(slotsCategoryNumber);
 	}
 
-	@Test(priority = 3, groups = "vendorAndGame")
-	@Parameters({ "slotsVendor", "vendorCQ9", "cq9Game1", "cq9Game2", "numberOfGamesToTest", "pastDate" })
-	public void selectCQ9VendorAndGame(String slotsVendor, String vendorCQ9, String cq9Game1, String cq9Game2, int numberOfGamesToTest, String pastDate) throws Exception {
-		rCreate.createTest("selectCQ9VendorAndGame");
-		if (slotsVendor.equalsIgnoreCase("ALL")) {
-			categoryVAG.selectFishVendors();
-			categoryVAG.selectFishGame(slotsVendor, cq9Game1, cq9Game2, numberOfGamesToTest, pastDate);
-
-		} else if (slotsVendor.equalsIgnoreCase("CQ9")) {
-			categoryVAG.selectFishVendors();
-			categoryVAG.selectFishGame(vendorCQ9, cq9Game1, cq9Game2, numberOfGamesToTest, pastDate);
-			
-		} else {
-			skip = "selectCQ9VendorAndGame skipped";
-			rCreate.getExtentTest().skip(skip);
-		}
-	}
+//	@Test(priority = 3, groups = "vendorAndGame")
+//	@Parameters({ "slotsVendor", "vendorCQ9", "cq9Game1", "cq9Game2", "numberOfGamesToTest", "pastDate" })
+//	public void selectCQ9VendorAndGame(String slotsVendor, String vendorCQ9, String cq9Game1, String cq9Game2, int numberOfGamesToTest, String pastDate) throws Exception {
+//		rCreate.createTest("selectCQ9VendorAndGame");
+//		if (slotsVendor.equalsIgnoreCase("ALL")) {
+//			categoryVAG.selectFishVendors();
+//			categoryVAG.selectFishGame(slotsVendor, cq9Game1, cq9Game2, numberOfGamesToTest, pastDate);
+//
+//		} else if (slotsVendor.equalsIgnoreCase("CQ9")) {
+//			categoryVAG.selectFishVendors();
+//			categoryVAG.selectFishGame(vendorCQ9, cq9Game1, cq9Game2, numberOfGamesToTest, pastDate);
+//			
+//		} else {
+//			skip = "selectCQ9VendorAndGame skipped";
+//			rCreate.getExtentTest().skip(skip);
+//		}
+//	}
 
 	@AfterMethod
 	public void logCaseStatus(ITestResult result) throws Exception {

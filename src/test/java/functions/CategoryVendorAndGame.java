@@ -86,54 +86,12 @@ public class CategoryVendorAndGame extends VariableContainer {
 				iterateNW.iterateToGameWindow();
 				iterateNW.maximizeWindow();
 				Thread.sleep(10000);
-				performB.performSlotsBetting();
+				performB.reduceBetAmountSlots();
+				performB.betSlots();
+				performB.closeWinSlots();
+				performB.settingsSlots();
+				performB.betRecordSlots();
 				Thread.sleep(5000);
-				iterateNW.iterateToBetRecordWindow();
-				Thread.sleep(2500);
-				inGameBTZABD.selectTimeZoneOption();
-				inGameBTZABD.selectTimezone();
-				if (pastDate.equalsIgnoreCase("0")) {
-					inGameBTZABD.selectTodayDate();
-				} else {
-					inGameBTZABD.selectCustomDate();
-					inGameBTZABD.selectPast6Days(pastDate);
-				}
-				inGameBTZABD.goToBetDetails(game);
-				Thread.sleep(2500);
-				iterateNW.iterateToBetDetailsWindow();
-				Thread.sleep(2500);
-				iterateNW.screenShotFinalWindow(game);
-				iterateNW.closeNewWindow();
-				Thread.sleep(2500);
-				iterateNW.backToMainWindow(parentWindow);
-			} else {
-				fail = "selectSlotsGame failed";
-				rCreate.getExtentTest().fail(fail);
-			}
-		}
-	}
-
-	public void selectFishGame(String slotsVendor, String gameName1, String gameName2, int numberOfGamesToTest, String pastDate) throws Exception {
-		parentWindow = bDriver.getDriver().getWindowHandle();
-
-		ArrayList<String> gameList = new ArrayList<String>();
-		gameList.add(gameName1);
-		gameList.add(gameName2);
-
-		for (int i = 0; i <= numberOfGamesToTest; i++) {
-			bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-			String game = gameList.get(i);
-			WebElement selectFishGame = bDriver.getDriver().findElement(By.xpath("//div[contains(text(),'" + game + "')]"));
-
-			if (selectFishGame.isDisplayed()) {
-				Actions builder = new Actions(bDriver.getDriver());
-				builder.moveToElement(selectFishGame).click().build().perform();
-
-				iterateNW.iterateToGameWindow();
-				iterateNW.maximizeWindow();
-				Thread.sleep(10000);
-				performB.performFishBetting();
-				Thread.sleep(2500);
 				iterateNW.iterateToBetRecordWindow();
 				Thread.sleep(2500);
 				inGameBTZABD.selectTimeZoneOption();

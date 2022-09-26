@@ -1,4 +1,5 @@
-"reduceBetAmountButton.png"
-"betButton.png"
-"settingsButton.png"
-"betRecordButton.png"
+find("reduceBetAmountButton.png")
+find("betButton.png")
+find("settingsButton.png")
+find("betRecordButton.png")
+find("closeWinButton.png")
