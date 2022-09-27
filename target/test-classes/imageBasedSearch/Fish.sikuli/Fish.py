@@ -1,7 +1,0 @@
-"heroFishOption-1.png"
-"tutorialAway.png"
-"autoShootON-1.png"
-"tapToShoot.png"
-"autoShootOff.png"
-"settingsButton.png"
-"betRecordButton.png"

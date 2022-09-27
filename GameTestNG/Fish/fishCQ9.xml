@@ -17,7 +17,7 @@
 	<parameter name="pastDate" value="0"></parameter>
 
 	<!-- IMPORTANT -->
-	<parameter name="slotsVendor" value="CQ9"></parameter>
+	<parameter name="fishVendor" value="CQ9"></parameter>
 
 	<parameter name="vendorCQ9" value="CQ9"></parameter>
 	<parameter name="cq9Game1" value="英雄捕鱼"></parameter>

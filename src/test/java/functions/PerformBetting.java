@@ -69,7 +69,7 @@ public class PerformBetting extends VariableContainer {
 		Screen s = new Screen();
 
 		s.wait(settingsButton, 10);
-		s.find(settingsButton.similar(0.3));
+		s.find(settingsButton.similar(0.5));
 		s.click(settingsButton);
 	}
 
@@ -77,6 +77,61 @@ public class PerformBetting extends VariableContainer {
 		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\Slots.sikuli\\";
 
 		Pattern betRecordButton = new Pattern(imageFolderPath + "betRecordButton.png").similar(0.5);
+		Screen s = new Screen();
+
+		s.wait(betRecordButton, 10);
+		s.find(betRecordButton);
+		s.click(betRecordButton);
+	}
+//	= = = = = + = = = = = + = = = = = + = = = = = + = = = = = + = = = = = + = = = = = + = = = = = + = = = = = + 
+	public void clickHeroFishOption() throws FindFailed {
+		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\FishHero.sikuli\\";
+
+		Pattern heroFishGameOption = new Pattern(imageFolderPath + "heroFishGameOption.png").similar(0.5);
+		Screen s = new Screen();
+
+		s.wait(heroFishGameOption, 10);
+		s.find(heroFishGameOption);
+		s.click(heroFishGameOption);
+	}
+	
+	public void closeTutorial() throws FindFailed {
+		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\FishHero.sikuli\\";
+
+		Pattern tutorialClickAndClose = new Pattern(imageFolderPath + "tutorialClickAndClose.png").similar(0.5);
+		Screen s = new Screen();
+
+		s.wait(tutorialClickAndClose, 10);
+		s.find(tutorialClickAndClose);
+		s.click(tutorialClickAndClose);
+	}
+	
+	public void anywhereToBet() throws FindFailed {
+		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\FishHero.sikuli\\";
+
+		Pattern anywhereToBet = new Pattern(imageFolderPath + "anywhereToBet.png").similar(0.5);
+		Screen s = new Screen();
+
+		s.wait(anywhereToBet, 10);
+		s.find(anywhereToBet);
+		s.click(anywhereToBet);
+	}
+	
+	public void settingsFish() throws FindFailed {
+		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\FishHero.sikuli\\";
+
+		Pattern settingButton = new Pattern(imageFolderPath + "settingButton.png").similar(0.7);
+		Screen s = new Screen();
+
+		s.wait(settingButton, 10);
+		s.find(settingButton);
+		s.click(settingButton);
+	}
+
+	public void betRecordFishHero() throws FindFailed {
+		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\FishHero.sikuli\\";
+
+		Pattern betRecordButton = new Pattern(imageFolderPath + "betRecordButton.png").similar(0.7);
 		Screen s = new Screen();
 
 		s.wait(betRecordButton, 10);
