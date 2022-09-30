@@ -6,6 +6,8 @@ import javax.security.auth.login.FailedLoginException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.sikuli.script.FindFailed;
+
 import baseUtilities.IterateNextWindows;
 import baseUtilities.ReportCreate;
 import baseUtilities.VariableContainer;
@@ -67,7 +69,7 @@ public class CategoryVendorAndGame extends VariableContainer {
 		}
 	}
 
-	public void selectSlotsGame(String slotsVendor, String gameName1, String gameName2, int numberOfGamesToTest, String pastDate) throws Exception {
+	public void selectSlotsGame(String slotsVendor, String gameName1, String gameName2, int numberOfGamesToTest) throws Exception {
 		parentWindow = bDriver.getDriver().getWindowHandle();
 
 		ArrayList<String> gameList = new ArrayList<String>();
@@ -86,22 +88,13 @@ public class CategoryVendorAndGame extends VariableContainer {
 				iterateNW.iterateToGameWindow();
 				iterateNW.maximizeWindow();
 				Thread.sleep(10000);
-				performB.reduceBetAmountSlots();
-				performB.betSlots();
-				performB.closeWinSlots();
-				performB.settingsSlots();
-				performB.betRecordSlots();
+				performB.doSlotsBet();
 				Thread.sleep(5000);
 				iterateNW.iterateToBetRecordWindow();
 				Thread.sleep(2500);
 				inGameBTZABD.selectTimeZoneOption();
 				inGameBTZABD.selectTimezone();
-				if (pastDate.equalsIgnoreCase("0")) {
-					inGameBTZABD.selectTodayDate();
-				} else {
-					inGameBTZABD.selectCustomDate();
-					inGameBTZABD.selectPast6Days(pastDate);
-				}
+				inGameBTZABD.selectTodayDate();
 				inGameBTZABD.goToBetDetails(game);
 				Thread.sleep(2500);
 				iterateNW.iterateToBetDetailsWindow();
@@ -117,7 +110,7 @@ public class CategoryVendorAndGame extends VariableContainer {
 		}
 	}
 
-	public void selectFishGame(String fishVendor, String gameName1, String gameName2, int numberOfGamesToTest, String pastDate) throws Exception {
+	public void selectFishGame(String slotsVendor, String gameName1, String gameName2, int numberOfGamesToTest) throws Exception {
 		parentWindow = bDriver.getDriver().getWindowHandle();
 
 		ArrayList<String> gameList = new ArrayList<String>();
@@ -127,31 +120,27 @@ public class CategoryVendorAndGame extends VariableContainer {
 		for (int i = 0; i <= numberOfGamesToTest; i++) {
 			bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 			String game = gameList.get(i);
-			WebElement selectSlotsGame = bDriver.getDriver().findElement(By.xpath("//div[contains(text(),'" + game + "')]"));
+			WebElement selectFishGame = bDriver.getDriver().findElement(By.xpath("//div[contains(text(),'" + game + "')]"));
 
-			if (selectSlotsGame.isDisplayed()) {
+			if (selectFishGame.isDisplayed()) {
 				Actions builder = new Actions(bDriver.getDriver());
-				builder.moveToElement(selectSlotsGame).click().build().perform();
+				builder.moveToElement(selectFishGame).click().build().perform();
 
 				iterateNW.iterateToGameWindow();
 				iterateNW.maximizeWindow();
-				Thread.sleep(60000);
-				performB.clickHeroFishOption();
-				performB.closeTutorial();
-				performB.anywhereToBet();
-				performB.settingsFish();
-				performB.betRecordFishHero();
+				Thread.sleep(10000);
+				if (game.equalsIgnoreCase(gameName1)) {
+					performB.doHeroFishBet();
+				}
+				if (game.equalsIgnoreCase(gameName2)) {
+					performB.doCanonFishBet();
+				}
 				Thread.sleep(5000);
 				iterateNW.iterateToBetRecordWindow();
 				Thread.sleep(2500);
 				inGameBTZABD.selectTimeZoneOption();
 				inGameBTZABD.selectTimezone();
-				if (pastDate.equalsIgnoreCase("0")) {
-					inGameBTZABD.selectTodayDate();
-				} else {
-					inGameBTZABD.selectCustomDate();
-					inGameBTZABD.selectPast6Days(pastDate);
-				}
+				inGameBTZABD.selectTodayDate();
 				inGameBTZABD.goToBetDetails(game);
 				Thread.sleep(2500);
 				iterateNW.iterateToBetDetailsWindow();

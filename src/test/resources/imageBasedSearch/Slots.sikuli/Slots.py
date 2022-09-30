@@ -1,5 +1,0 @@
-find("reduceBetAmountButton.png")
-find("betButton.png")
-find("settingsButton.png")
-find("betRecordButton.png")
-find("closeWinButton.png")

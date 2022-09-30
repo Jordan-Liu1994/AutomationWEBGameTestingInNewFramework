@@ -1,5 +1,0 @@
-find("heroFishGameOption.png")
-find("tutorialClickAndClose.png")
-find("anywhereToBet.png")
-find("settingButton.png")
-find("betRecordButton.png")

@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-27T16:30:28 SGT" name="Suite-CQ9SLots" finished-at="2022-09-27T16:33:34 SGT" duration-ms="186618">
+  <suite started-at="2022-09-30T14:27:01 SGT" name="Suite-SGT" finished-at="2022-09-30T14:27:01 SGT" duration-ms="0">
+    <groups>
+    </groups>
+  </suite> <!-- Suite-SGT -->
+  <suite started-at="2022-09-30T14:25:12 SGT" name="Suite-CQ9SLots" finished-at="2022-09-30T14:27:01 SGT" duration-ms="109363">
     <groups>
       <group name="category">
-        <method signature="CQ9FishGame.selectCategory(java.lang.String)[pri:2, instance:runnerFish004.CQ9FishGame@d1f74b8]" name="selectCategory" class="runnerFish004.CQ9FishGame"/>
+        <method signature="CQ9FishGame.selectCategory(java.lang.String)[pri:2, instance:runnerFish004.CQ9FishGame@5149f008]" name="selectCategory" class="runnerFish004.CQ9FishGame"/>
       </group> <!-- category -->
       <group name="login">
-        <method signature="CQ9FishGame.login(java.lang.String)[pri:1, instance:runnerFish004.CQ9FishGame@d1f74b8]" name="login" class="runnerFish004.CQ9FishGame"/>
+        <method signature="CQ9FishGame.login(java.lang.String)[pri:1, instance:runnerFish004.CQ9FishGame@5149f008]" name="login" class="runnerFish004.CQ9FishGame"/>
       </group> <!-- login -->
       <group name="vendorAndGame">
-        <method signature="CQ9FishGame.selectCQ9VendorAndGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)[pri:3, instance:runnerFish004.CQ9FishGame@d1f74b8]" name="selectCQ9VendorAndGame" class="runnerFish004.CQ9FishGame"/>
+        <method signature="CQ9FishGame.selectCQ9VendorAndGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:3, instance:runnerFish004.CQ9FishGame@5149f008]" name="selectCQ9VendorAndGame" class="runnerFish004.CQ9FishGame"/>
       </group> <!-- vendorAndGame -->
     </groups>
-    <test started-at="2022-09-27T16:30:28 SGT" name="CQ9SLots" finished-at="2022-09-27T16:33:34 SGT" duration-ms="186618">
+    <test started-at="2022-09-30T14:25:12 SGT" name="CQ9SLots" finished-at="2022-09-30T14:27:01 SGT" duration-ms="109363">
       <class name="runnerFish004.CQ9FishGame">
-        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:runnerFish004.CQ9FishGame@d1f74b8]" started-at="2022-09-27T16:30:28 SGT" name="startReportAndSetProperty" finished-at="2022-09-27T16:30:30 SGT" duration-ms="1811" status="PASS">
+        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:12 SGT" name="startReportAndSetProperty" finished-at="2022-09-30T14:25:14 SGT" duration-ms="2423" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -42,7 +46,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReportAndSetProperty -->
-        <test-method signature="goToSite(java.lang.String)[pri:0, instance:runnerFish004.CQ9FishGame@d1f74b8]" started-at="2022-09-27T16:30:30 SGT" name="goToSite" finished-at="2022-09-27T16:30:33 SGT" duration-ms="3144" status="PASS">
+        <test-method signature="goToSite(java.lang.String)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:14 SGT" name="goToSite" finished-at="2022-09-30T14:25:18 SGT" duration-ms="3596" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,18 +57,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToSite -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@d1f74b8]" started-at="2022-09-27T16:30:33 SGT" name="logCaseStatus" finished-at="2022-09-27T16:30:33 SGT" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:18 SGT" name="logCaseStatus" finished-at="2022-09-30T14:25:18 SGT" duration-ms="12" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=goToSite status=SUCCESS method=CQ9FishGame.goToSite(java.lang.String)[pri:0, instance:runnerFish004.CQ9FishGame@d1f74b8] output={null}]]]>
+                <![CDATA[[TestResult name=goToSite status=SUCCESS method=CQ9FishGame.goToSite(java.lang.String)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="login(java.lang.String)[pri:1, instance:runnerFish004.CQ9FishGame@d1f74b8]" started-at="2022-09-27T16:30:33 SGT" name="login" finished-at="2022-09-27T16:30:38 SGT" duration-ms="4806" status="PASS">
+        <test-method signature="login(java.lang.String)[pri:1, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:18 SGT" name="login" finished-at="2022-09-30T14:25:24 SGT" duration-ms="5565" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,18 +79,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@d1f74b8]" started-at="2022-09-27T16:30:38 SGT" name="logCaseStatus" finished-at="2022-09-27T16:30:38 SGT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:24 SGT" name="logCaseStatus" finished-at="2022-09-30T14:25:24 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=CQ9FishGame.login(java.lang.String)[pri:1, instance:runnerFish004.CQ9FishGame@d1f74b8] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=CQ9FishGame.login(java.lang.String)[pri:1, instance:runnerFish004.CQ9FishGame@5149f008] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="selectCategory(java.lang.String)[pri:2, instance:runnerFish004.CQ9FishGame@d1f74b8]" started-at="2022-09-27T16:30:38 SGT" name="selectCategory" finished-at="2022-09-27T16:30:39 SGT" duration-ms="1904" status="PASS">
+        <test-method signature="selectCategory(java.lang.String)[pri:2, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:24 SGT" name="selectCategory" finished-at="2022-09-30T14:25:25 SGT" duration-ms="1543" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,18 +101,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectCategory -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@d1f74b8]" started-at="2022-09-27T16:30:39 SGT" name="logCaseStatus" finished-at="2022-09-27T16:30:39 SGT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:25 SGT" name="logCaseStatus" finished-at="2022-09-30T14:25:25 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=selectCategory status=SUCCESS method=CQ9FishGame.selectCategory(java.lang.String)[pri:2, instance:runnerFish004.CQ9FishGame@d1f74b8] output={null}]]]>
+                <![CDATA[[TestResult name=selectCategory status=SUCCESS method=CQ9FishGame.selectCategory(java.lang.String)[pri:2, instance:runnerFish004.CQ9FishGame@5149f008] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="selectCQ9VendorAndGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)[pri:3, instance:runnerFish004.CQ9FishGame@d1f74b8]" started-at="2022-09-27T16:30:39 SGT" name="selectCQ9VendorAndGame" finished-at="2022-09-27T16:33:32 SGT" duration-ms="172752" status="FAIL">
+        <test-method signature="selectCQ9VendorAndGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:3, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:25 SGT" name="selectCQ9VendorAndGame" finished-at="2022-09-30T14:27:00 SGT" duration-ms="94394" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -135,70 +139,22 @@
                 <![CDATA[1]]>
               </value>
             </param>
-            <param index="5">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
           </params>
-          <exception class="org.sikuli.script.FindFailed">
-            <message>
-              <![CDATA[C:\Eclipse-Workspace\AutomationWEBGameTestingInNewFramework.\src\test\resources\imageBasedSearch\FishHero.sikuli\heroFishGameOption.png: (422x444) seen at (525, 590) with 0.74 in R[0,0 2048x1152]@S(0)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[FindFailed: C:\Eclipse-Workspace\AutomationWEBGameTestingInNewFramework.\src\test\resources\imageBasedSearch\FishHero.sikuli\heroFishGameOption.png: (422x444) seen at (525, 590) with 0.74 in R[0,0 2048x1152]@S(0)
-  Line 2226, in file Region.java
-
-at org.sikuli.script.Region.wait(Region.java:2226)
-at functions.PerformBetting.clickHeroFishOption(PerformBetting.java:93)
-at functions.CategoryVendorAndGame.selectFishGame(CategoryVendorAndGame.java:139)
-at runnerFish004.CQ9FishGame.selectCQ9VendorAndGame(CQ9FishGame.java:70)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.sikuli.script.FindFailed -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectCQ9VendorAndGame -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@d1f74b8]" started-at="2022-09-27T16:33:32 SGT" name="logCaseStatus" finished-at="2022-09-27T16:33:33 SGT" duration-ms="630" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:27:00 SGT" name="logCaseStatus" finished-at="2022-09-30T14:27:00 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=selectCQ9VendorAndGame status=FAILURE method=CQ9FishGame.selectCQ9VendorAndGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)[pri:3, instance:runnerFish004.CQ9FishGame@d1f74b8] output={null}]]]>
+                <![CDATA[[TestResult name=selectCQ9VendorAndGame status=SUCCESS method=CQ9FishGame.selectCQ9VendorAndGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:3, instance:runnerFish004.CQ9FishGame@5149f008] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method is-config="true" signature="stopDriver()[pri:0, instance:runnerFish004.CQ9FishGame@d1f74b8]" started-at="2022-09-27T16:33:33 SGT" name="stopDriver" finished-at="2022-09-27T16:33:34 SGT" duration-ms="1512" status="PASS">
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:27:00 SGT" name="stopDriver" finished-at="2022-09-30T14:27:01 SGT" duration-ms="1765" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDriver -->

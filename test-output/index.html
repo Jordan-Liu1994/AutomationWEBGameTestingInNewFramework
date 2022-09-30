@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">2 suites</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite_CQ9SLots" class="navigator-link">
-              <span class="suite-name border-failed">Suite-CQ9SLots</span>
+              <span class="suite-name border-passed">Suite-CQ9SLots</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite_CQ9SLots" class="navigator-link ">
-                    <span>C:\Eclipse-Workspace\AutomationWEBGameTestingInNewFramework\GameTestNG\Fish\fishCQ9.xml</span>
+                    <span>D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\GameTestNG\Fish\fishCQ9.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite_CQ9SLots" class="hide-methods failed suite-Suite_CQ9SLots"> (hide)</a> <!-- hide-methods failed suite-Suite_CQ9SLots -->
-                      <a href="#" panel-name="suite-Suite_CQ9SLots" class="show-methods failed suite-Suite_CQ9SLots"> (show)</a> <!-- show-methods failed suite-Suite_CQ9SLots -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite_CQ9SLots">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite_CQ9SLots" title="runnerFish004.CQ9FishGame" class="method navigator-link" hash-for-method="selectCQ9VendorAndGame(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1, 0)">selectCQ9VendorAndGame(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1, 0)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite_CQ9SLots -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -128,6 +114,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite_CQ9SLots" title="runnerFish004.CQ9FishGame" class="method navigator-link" hash-for-method="selectCQ9VendorAndGame(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1)">selectCQ9VendorAndGame(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite_CQ9SLots" title="runnerFish004.CQ9FishGame" class="method navigator-link" hash-for-method="selectCategory(5)">selectCategory(5)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -142,33 +133,9 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
+        <div panel-name="suite-Suite_SGT" class="panel Suite_SGT">
+        </div> <!-- panel Suite_SGT -->
         <div panel-name="suite-Suite_CQ9SLots" class="panel Suite_CQ9SLots">
-          <div class="suite-Suite_CQ9SLots-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">runnerFish004.CQ9FishGame</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="selectCQ9VendorAndGame(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1, 0)">
-                  </a> <!-- selectCQ9VendorAndGame(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1, 0) -->
-                  <span class="method-name">selectCQ9VendorAndGame</span>
-                  <span class="parameters">(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1, 0)</span>
-                  <div class="stack-trace">FindFailed: C:\Eclipse-Workspace\AutomationWEBGameTestingInNewFramework.\src\test\resources\imageBasedSearch\FishHero.sikuli\heroFishGameOption.png: (422x444) seen at (525, 590) with 0.74 in R[0,0 2048x1152]@S(0)
-  Line 2226, in file Region.java
-
-	at org.sikuli.script.Region.wait(Region.java:2226)
-	at functions.PerformBetting.clickHeroFishOption(PerformBetting.java:93)
-	at functions.CategoryVendorAndGame.selectFishGame(CategoryVendorAndGame.java:139)
-	at runnerFish004.CQ9FishGame.selectCQ9VendorAndGame(CQ9FishGame.java:70)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite_CQ9SLots-class-failed -->
           <div class="suite-Suite_CQ9SLots-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -193,6 +160,14 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="selectCQ9VendorAndGame(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1)">
+                  </a> <!-- selectCQ9VendorAndGame(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1) -->
+                  <span class="method-name">selectCQ9VendorAndGame</span>
+                  <span class="parameters">(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="selectCategory(5)">
                   </a> <!-- selectCategory(5) -->
                   <span class="method-name">selectCategory</span>
@@ -202,22 +177,46 @@
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite_CQ9SLots-class-passed -->
         </div> <!-- panel Suite_CQ9SLots -->
+        <div panel-name="test-xml-Suite_SGT" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\masterTestng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Suite-SGT&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;parameter name=&quot;slotsVendor&quot; value=&quot;cq9&quot;/&gt;
+  &lt;parameter name=&quot;javaVersion&quot; value=&quot;JDK/JSE 17&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+  &lt;parameter name=&quot;fishVendor&quot; value=&quot;CQ9&quot;/&gt;
+  &lt;parameter name=&quot;user&quot; value=&quot;Jordan&quot;/&gt;
+  &lt;parameter name=&quot;userIDFE&quot; value=&quot;qctestergame001&quot;/&gt;
+  &lt;parameter name=&quot;platform&quot; value=&quot;Web&quot;/&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;https://wltestmembersite.the777888.com&quot;/&gt;
+  &lt;suite-files&gt;
+    &lt;suite-file path=&quot;GameTestNG\Fish\fishCQ9.xml&quot;/&gt;
+  &lt;/suite-files&gt;
+&lt;/suite&gt; &lt;!-- Suite-SGT --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
         <div panel-name="test-xml-Suite_CQ9SLots" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Eclipse-Workspace\AutomationWEBGameTestingInNewFramework\GameTestNG\Fish\fishCQ9.xml</span>
+            <span class="header-content">D:\Eclipse WorkSpace\AutomationWEBGameTestingInNewFramework\GameTestNG\Fish\fishCQ9.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite-CQ9SLots&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;parameter name=&quot;pastDate&quot; value=&quot;0&quot;/&gt;
-  &lt;parameter name=&quot;slotsCategoryNumber&quot; value=&quot;5&quot;/&gt;
+  &lt;parameter name=&quot;slotsVendor&quot; value=&quot;cq9&quot;/&gt;
   &lt;parameter name=&quot;javaVersion&quot; value=&quot;JDK/JSE 17&quot;/&gt;
   &lt;parameter name=&quot;fishVendor&quot; value=&quot;CQ9&quot;/&gt;
   &lt;parameter name=&quot;vendorCQ9&quot; value=&quot;CQ9&quot;/&gt;
   &lt;parameter name=&quot;platform&quot; value=&quot;Web&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://wltestmembersite.the777888.com&quot;/&gt;
+  &lt;parameter name=&quot;fishCategoryNumber&quot; value=&quot;5&quot;/&gt;
   &lt;parameter name=&quot;numberOfGamesToTest&quot; value=&quot;1&quot;/&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
   &lt;parameter name=&quot;cq9Game3&quot; value=&quot;欢乐捕鱼&quot;/&gt;
@@ -234,6 +233,15 @@
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
+        <div panel-name="testlist-Suite_SGT" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite-SGT</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
         <div panel-name="testlist-Suite_CQ9SLots" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Tests for Suite-CQ9SLots</span>
@@ -244,6 +252,13 @@
                 <span class="test-name">CQ9SLots (1 class)</span>
               </li>
             </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite_SGT" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite-SGT</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="group-Suite_CQ9SLots" class="panel">
@@ -277,6 +292,31 @@
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
+        <div panel-name="times-Suite_SGT" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite-SGT</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite_SGT');
+function tableData_Suite_SGT() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(0);
+window.suiteTableData['Suite_SGT']= { tableData: data, tableDiv: 'times-div-Suite_SGT'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 0 ms</span>
+              <div id="times-div-Suite_SGT">
+              </div> <!-- times-div-Suite_SGT -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
         <div panel-name="times-Suite_CQ9SLots" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Times for Suite-CQ9SLots</span>
@@ -295,27 +335,34 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'selectCQ9VendorAndGame')
 data.setCell(0, 2, 'runnerFish004.CQ9FishGame')
-data.setCell(0, 3, 172752);
+data.setCell(0, 3, 94394);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'login')
 data.setCell(1, 2, 'runnerFish004.CQ9FishGame')
-data.setCell(1, 3, 4806);
+data.setCell(1, 3, 5565);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'goToSite')
 data.setCell(2, 2, 'runnerFish004.CQ9FishGame')
-data.setCell(2, 3, 3144);
+data.setCell(2, 3, 3596);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'selectCategory')
 data.setCell(3, 2, 'runnerFish004.CQ9FishGame')
-data.setCell(3, 3, 1904);
+data.setCell(3, 3, 1543);
 window.suiteTableData['Suite_CQ9SLots']= { tableData: data, tableDiv: 'times-div-Suite_CQ9SLots'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite_CQ9SLots">
               </div> <!-- times-div-Suite_CQ9SLots -->
             </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite_SGT" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite-SGT</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="reporter-Suite_CQ9SLots" class="panel">
@@ -325,9 +372,23 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite_SGT" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite_CQ9SLots" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite_SGT" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -345,41 +406,39 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">goToSite(https://wltestmembersite.the777888.com)</span>
-                <span class="method-start">1821 ms</span>
+                <span class="method-start">2433 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logCaseStatus([TestResult name=goToSite status=SUCCESS method=CQ9FishGame.goToSite(java.lang.String)[pri:0, instan...)</span>
-                <span class="method-start">4968 ms</span>
+                <span class="method-start">6032 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">login(qctestergame001)</span>
-                <span class="method-start">4974 ms</span>
+                <span class="method-start">6049 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logCaseStatus([TestResult name=login status=SUCCESS method=CQ9FishGame.login(java.lang.String)[pri:1, instance:run...)</span>
-                <span class="method-start">9781 ms</span>
+                <span class="method-start">11616 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">selectCategory(5)</span>
-                <span class="method-start">9782 ms</span>
+                <span class="method-start">11617 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logCaseStatus([TestResult name=selectCategory status=SUCCESS method=CQ9FishGame.selectCategory(java.lang.String)[p...)</span>
-                <span class="method-start">11687 ms</span>
+                <span class="method-start">13161 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">selectCQ9VendorAndGame(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1, 0)</span>
-                <span class="method-start">11688 ms</span>
+                <span class="method-name">selectCQ9VendorAndGame(CQ9, CQ9, 英雄捕鱼, 一炮捕鱼, 1)</span>
+                <span class="method-start">13162 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">logCaseStatus([TestResult name=selectCQ9VendorAndGame status=FAILURE method=CQ9FishGame.selectCQ9VendorAndGame(jav...)</span>
-                <span class="method-start">184442 ms</span>
+                <span class="method-name">logCaseStatus([TestResult name=selectCQ9VendorAndGame status=SUCCESS method=CQ9FishGame.selectCQ9VendorAndGame(jav...)</span>
+                <span class="method-start">107557 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">stopDriver</span>
-                <span class="method-start">185072 ms</span>
+                <span class="method-start">107558 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

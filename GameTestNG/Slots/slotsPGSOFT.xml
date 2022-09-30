@@ -14,7 +14,6 @@
 		arrangement of categories -->
 	<parameter name="slotsCategoryNumber" value="3"></parameter>
 	<parameter name="numberOfGamesToTest" value="1"></parameter>
-	<parameter name="pastDate" value="0"></parameter>
 
 	<!-- IMPORTANT -->
 	<parameter name="slotsVendor" value="PGSOFT"></parameter>

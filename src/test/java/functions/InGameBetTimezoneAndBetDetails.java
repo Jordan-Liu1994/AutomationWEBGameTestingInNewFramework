@@ -34,30 +34,6 @@ public class InGameBetTimezoneAndBetDetails extends VariableContainer {
 		}
 	}
 
-	public void selectCustomDate() throws InterruptedException {
-		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		Thread.sleep(5000);
-		WebElement selectCustomDate = bDriver.getDriver().findElement(By.xpath("//span[@class='ga_quicksearch_custom']"));
-		if (selectCustomDate.isDisplayed()) {
-			selectCustomDate.click();
-		} else {
-			fail = "selectCustomDate failed";
-			rCreate.getExtentTest().fail(fail);
-		}
-	}
-
-	public void selectPast6Days(String pastDate) throws InterruptedException {
-		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		Thread.sleep(1000);
-		WebElement selectPast6Days = bDriver.getDriver().findElement(By.xpath("(//div[@class='text ga_customdate_" + pastDate + "'])[1]"));
-		if (selectPast6Days.isDisplayed()) {
-			selectPast6Days.click();
-		} else {
-			fail = "selectPast6Days failed";
-			rCreate.getExtentTest().fail(fail);
-		}
-	}
-
 	public void selectTodayDate() throws InterruptedException {
 		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		Thread.sleep(5000);

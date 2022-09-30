@@ -13,8 +13,14 @@
 
 	<parameter name="slotsVendor" value="cq9"></parameter>
 
-	<suite-files>
+	<!-- <suite-files>
 		<suite-file path="GameTestNG\Slots\slotsPGSOFT.xml"></suite-file>
 		<suite-file path="GameTestNG\Slots\slotsCQ9.xml"></suite-file>
+	</suite-files> -->
+
+	<parameter name="fishVendor" value="cq9"></parameter>
+
+	<suite-files>
+		<suite-file path="GameTestNG\Fish\fishCQ9.xml"></suite-file>
 	</suite-files>
 </suite>

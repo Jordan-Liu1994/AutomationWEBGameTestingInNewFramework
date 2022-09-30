@@ -58,16 +58,16 @@ public class PGSOFTSlotsGame extends VariableContainer {
 	}
 
 	@Test(priority = 3, groups = "vendorAndGame")
-	@Parameters({ "slotsVendor", "vendorPGSOFT", "cq9Game1", "cq9Game2", "numberOfGamesToTest", "pastDate" })
-	public void selectPGSOFTVendorAndGame(String slotsVendor, String vendorPGSOFT, String pgsoftGame1, String pgsoftGame2, int numberOfGamesToTest, String pastDate) throws Exception {
+	@Parameters({ "slotsVendor", "vendorPGSOFT", "cq9Game1", "cq9Game2", "numberOfGamesToTest" })
+	public void selectPGSOFTVendorAndGame(String slotsVendor, String vendorPGSOFT, String pgsoftGame1, String pgsoftGame2, int numberOfGamesToTest) throws Exception {
 		rCreate.createTest("selectPGSOFTVendorAndGame");
 		if (slotsVendor.equalsIgnoreCase("ALL")) {
 			categoryVAG.selectVendors(vendorPGSOFT);
-			categoryVAG.selectSlotsGame(vendorPGSOFT, pgsoftGame1, pgsoftGame2, numberOfGamesToTest, pastDate);
+			categoryVAG.selectSlotsGame(vendorPGSOFT, pgsoftGame1, pgsoftGame2, numberOfGamesToTest);
 
 		} else if (slotsVendor.equalsIgnoreCase("PGSOFT")) {
 			categoryVAG.selectVendors(vendorPGSOFT);
-			categoryVAG.selectSlotsGame(vendorPGSOFT, pgsoftGame1, pgsoftGame2, numberOfGamesToTest, pastDate);
+			categoryVAG.selectSlotsGame(vendorPGSOFT, pgsoftGame1, pgsoftGame2, numberOfGamesToTest);
 			
 		} else {
 			skip = "selectPGSOFTVendorAndGame skipped";

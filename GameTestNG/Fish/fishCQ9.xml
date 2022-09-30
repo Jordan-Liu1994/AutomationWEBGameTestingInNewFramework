@@ -12,9 +12,8 @@
 
 	<!-- This is the index of the category, might change depending on position 
 		arrangement of categories -->
-	<parameter name="slotsCategoryNumber" value="5"></parameter>
+	<parameter name="fishCategoryNumber" value="5"></parameter>
 	<parameter name="numberOfGamesToTest" value="1"></parameter>
-	<parameter name="pastDate" value="0"></parameter>
 
 	<!-- IMPORTANT -->
 	<parameter name="fishVendor" value="CQ9"></parameter>
@@ -25,11 +24,6 @@
 	<parameter name="cq9Game3" value="欢乐捕鱼"></parameter>
 
 	<test thread-count="3" name="CQ9SLots">
-		<groups>
-			<run>
-				<!-- <exclude name="vendorAndGame"></exclude> -->
-			</run>
-		</groups>
 		<classes>
 			<class name="runnerFish004.CQ9FishGame"></class>
 		</classes>

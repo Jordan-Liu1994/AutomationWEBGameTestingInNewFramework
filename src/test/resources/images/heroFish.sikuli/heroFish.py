@@ -1,0 +1,5 @@
+"heroFishGameOption.png"
+"tutorialClose.png"
+"betAreaOneShot.png"
+"settingButton.png"
+"betRecordButton.png"

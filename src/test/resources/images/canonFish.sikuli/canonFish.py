@@ -1,0 +1,6 @@
+"closeTutorialButton.png"
+"canonFishGameOption.png"
+"closeTutorialButton2.png"
+"betAreaOneShot.png"
+"settingButton.png"
+"betRecordButton.png"

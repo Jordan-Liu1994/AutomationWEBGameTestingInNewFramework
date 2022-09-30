@@ -13,129 +13,199 @@ public class PerformBetting extends VariableContainer {
 	ReportCreate rCreate = new ReportCreate();
 
 	String userDir = System.getProperty("user.dir");
-	String imageFolderPath;
 
-	public void reduceBetAmountSlots() throws FindFailed {
-		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\Slots.sikuli\\";
+	public void doSlotsBet() throws FindFailed, InterruptedException {
+		String imageFilePath = userDir + "\\src\\test\\resources\\images\\slots.sikuli\\";
 
-		Pattern reduceBetAmountButton = new Pattern(imageFolderPath + "reduceBetAmountButton.png").similar(0.5);
+		Pattern betButton = new Pattern(imageFilePath + "betButton1.1.png");
+		Pattern reduceBetAmountButton = new Pattern(imageFilePath + "reduceBetAmountButton.png").similar(0.5);
+		Pattern settingButton = new Pattern(imageFilePath + "settingButton.png");
+		Pattern betRecordButton = new Pattern(imageFilePath + "betRecordButton.png");
+		Pattern closeWinButton = new Pattern(imageFilePath + "closeWinButton.png");
 
-		Screen s = new Screen();
+		Screen s = new Screen(0);
 
-//		REDUCES TO MINIMUM BET AMOUNT FOR CQ9 SLOTS GAME
-		int a = 1;
-		while (a <= 5) {
-			s.wait(reduceBetAmountButton, 10);
-			s.find(reduceBetAmountButton);
-			s.click(reduceBetAmountButton);
-			a++;
+		if (s.exists(reduceBetAmountButton) != null) {
+			int a = 1;
+			while (a <= 5) {
+				s.wait(reduceBetAmountButton, 10);
+				s.find(reduceBetAmountButton);
+				s.click(reduceBetAmountButton);
+				a++;
+			}
+		} else {
+			fail = "reduceBetAmountButton failed";
+			rCreate.getExtentTest().fail(fail);
 		}
-	}
 
-	public void betSlots() throws FindFailed, InterruptedException {
-		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\Slots.sikuli\\";
+		if (s.exists(betButton) != null) {
+			s.wait(betButton, 10);
+			s.find(betButton);
+			s.click(betButton);
+		} else {
+			fail = "settingButton failed";
+			rCreate.getExtentTest().fail(fail);
+		}
 
-		Pattern betButton = new Pattern(imageFolderPath + "betButton.png").similar(0.5);
-		Screen s = new Screen();
-
-		s.wait(betButton, 10);
-		s.find(betButton);
-		s.click(betButton);
 		Thread.sleep(5000);
-	}
-
-	public void closeWinSlots() throws FindFailed, InterruptedException {
-		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\Slots.sikuli\\";
 
 		try {
-			Pattern closeWinButton = new Pattern(imageFolderPath + "closeWinButton.png").similar(0.8);
-			Screen s = new Screen();
-
-			if (s.has(closeWinButton)) {
+			if (s.exists(closeWinButton) != null) {
+				s.wait(betButton, 10);
 				s.exists(closeWinButton, 10);
 				s.click(closeWinButton);
-				Thread.sleep(2500);
+			} else {
+				skip = "Never win skipped";
+				rCreate.getExtentTest().skip(skip);
 			}
 		} catch (FindFailed | SkipException e) {
-			skip = "Never win skipped";
-			rCreate.getExtentTest().skip(skip);
+			System.out.println(e);
+		}
+
+		if (s.exists(settingButton) != null) {
+			s.wait(settingButton, 10);
+			s.find(settingButton);
+			s.click(settingButton);
+		} else {
+			fail = "settingButton failed";
+			rCreate.getExtentTest().fail(fail);
+		}
+
+		if (s.exists(betRecordButton) != null) {
+			s.wait(betRecordButton, 10);
+			s.find(betRecordButton);
+			s.click(betRecordButton);
+		} else {
+			fail = "betRecordButton failed";
+			rCreate.getExtentTest().fail(fail);
 		}
 	}
 
-	public void settingsSlots() throws FindFailed {
-		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\Slots.sikuli\\";
+	public void doHeroFishBet() throws FindFailed, InterruptedException {
+		String imageFilePath = userDir + "\\src\\test\\resources\\images\\heroFish.sikuli\\";
 
-		Pattern settingsButton = new Pattern(imageFolderPath + "settingsButton.png").similar(0.5);
-		Screen s = new Screen();
+		Pattern heroFishGameOption = new Pattern(imageFilePath + "heroFishGameOption.png").similar(0.5);
+		Pattern tutorialClose = new Pattern(imageFilePath + "tutorialClose.png").similar(0.5);
+		Pattern betAreaOneShot = new Pattern(imageFilePath + "betAreaOneShot.png");
+		Pattern settingButton = new Pattern(imageFilePath + "settingButton.png");
+		Pattern betRecordButton = new Pattern(imageFilePath + "betRecordButton.png");
 
-		s.wait(settingsButton, 10);
-		s.find(settingsButton.similar(0.5));
-		s.click(settingsButton);
-	}
+		Screen s = new Screen(0);
 
-	public void betRecordSlots() throws FindFailed {
-		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\Slots.sikuli\\";
+		if (s.exists(heroFishGameOption) != null) {
+			s.wait(heroFishGameOption, 10);
+			s.find(heroFishGameOption);
+			s.click(heroFishGameOption);
+		} else {
+			fail = "heroFishGameOption failed";
+			rCreate.getExtentTest().fail(fail);
+		}
 
-		Pattern betRecordButton = new Pattern(imageFolderPath + "betRecordButton.png").similar(0.5);
-		Screen s = new Screen();
+		if (s.exists(tutorialClose) != null) {
+			s.wait(tutorialClose, 10);
+			s.find(tutorialClose);
+			s.click(tutorialClose);
+		} else {
+			fail = "tutorialClose failed";
+			rCreate.getExtentTest().fail(fail);
+		}
 
-		s.wait(betRecordButton, 10);
-		s.find(betRecordButton);
-		s.click(betRecordButton);
-	}
-//	= = = = = + = = = = = + = = = = = + = = = = = + = = = = = + = = = = = + = = = = = + = = = = = + = = = = = + 
-	public void clickHeroFishOption() throws FindFailed {
-		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\FishHero.sikuli\\";
+		if (s.exists(betAreaOneShot) != null) {
+			s.wait(betAreaOneShot, 10);
+			s.find(betAreaOneShot);
+			s.click(betAreaOneShot);
+		} else {
+			fail = "betAreaOneShot failed";
+			rCreate.getExtentTest().fail(fail);
+		}
 
-		Pattern heroFishGameOption = new Pattern(imageFolderPath + "heroFishGameOption.png").similar(0.5);
-		Screen s = new Screen();
+		Thread.sleep(5000);
+		
+		if (s.exists(settingButton) != null) {
+			s.wait(settingButton, 10);
+			s.find(settingButton);
+			s.click(settingButton);
+		} else {
+			fail = "settingButton failed";
+			rCreate.getExtentTest().fail(fail);
+		}
 
-		s.wait(heroFishGameOption, 10);
-		s.find(heroFishGameOption);
-		s.click(heroFishGameOption);
+		if (s.exists(betRecordButton) != null) {
+			s.wait(betRecordButton, 10);
+			s.find(betRecordButton);
+			s.click(betRecordButton);
+		} else {
+			fail = "betRecordButton failed";
+			rCreate.getExtentTest().fail(fail);
+		}
 	}
 	
-	public void closeTutorial() throws FindFailed {
-		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\FishHero.sikuli\\";
+	public void doCanonFishBet() throws FindFailed, InterruptedException {
+		String imageFilePath = userDir + "\\src\\test\\resources\\images\\canonFish.sikuli\\";
 
-		Pattern tutorialClickAndClose = new Pattern(imageFolderPath + "tutorialClickAndClose.png").similar(0.5);
-		Screen s = new Screen();
+		Pattern canonFishGameOption = new Pattern(imageFilePath + "canonFishGameOption.png").similar(0.5);
+		Pattern closeTutorialButton = new Pattern(imageFilePath + "closeTutorialButton.png");
+		Pattern closeTutorialButton2 = new Pattern(imageFilePath + "closeTutorialButton2.png");
+		Pattern betAreaOneShot = new Pattern(imageFilePath + "betAreaOneShot.png").similar(0.5);
+		Pattern settingButton = new Pattern(imageFilePath + "settingButton.png");
+		Pattern betRecordButton = new Pattern(imageFilePath + "betRecordButton.png");
 
-		s.wait(tutorialClickAndClose, 10);
-		s.find(tutorialClickAndClose);
-		s.click(tutorialClickAndClose);
-	}
-	
-	public void anywhereToBet() throws FindFailed {
-		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\FishHero.sikuli\\";
+		Screen s = new Screen(0);
 
-		Pattern anywhereToBet = new Pattern(imageFolderPath + "anywhereToBet.png").similar(0.5);
-		Screen s = new Screen();
+		if (s.exists(closeTutorialButton) != null) {
+			s.wait(closeTutorialButton, 10);
+			s.find(closeTutorialButton);
+			s.click(closeTutorialButton);
+		} else {
+			fail = "closeTutorialButton failed";
+			rCreate.getExtentTest().fail(fail);
+		}
+		
+		if (s.exists(canonFishGameOption) != null) {
+			s.wait(canonFishGameOption, 10);
+			s.find(canonFishGameOption);
+			s.click(canonFishGameOption);
+		} else {
+			fail = "heroFishGameOption failed";
+			rCreate.getExtentTest().fail(fail);
+		}
+		
+		if (s.exists(closeTutorialButton2) != null) {
+			s.wait(closeTutorialButton2, 10);
+			s.find(closeTutorialButton2);
+			s.click(closeTutorialButton2);
+		} else {
+			fail = "closeTutorialButton2 failed";
+			rCreate.getExtentTest().fail(fail);
+		}
 
-		s.wait(anywhereToBet, 10);
-		s.find(anywhereToBet);
-		s.click(anywhereToBet);
-	}
-	
-	public void settingsFish() throws FindFailed {
-		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\FishHero.sikuli\\";
+		if (s.exists(betAreaOneShot) != null) {
+			s.wait(betAreaOneShot, 10);
+			s.find(betAreaOneShot);
+			s.click(betAreaOneShot);
+		} else {
+			fail = "betAreaOneShot failed";
+			rCreate.getExtentTest().fail(fail);
+		}
 
-		Pattern settingButton = new Pattern(imageFolderPath + "settingButton.png").similar(0.7);
-		Screen s = new Screen();
+		Thread.sleep(5000);
+		
+		if (s.exists(settingButton) != null) {
+			s.wait(settingButton, 10);
+			s.find(settingButton);
+			s.click(settingButton);
+		} else {
+			fail = "settingButton failed";
+			rCreate.getExtentTest().fail(fail);
+		}
 
-		s.wait(settingButton, 10);
-		s.find(settingButton);
-		s.click(settingButton);
-	}
-
-	public void betRecordFishHero() throws FindFailed {
-		imageFolderPath = userDir + ".\\src\\test\\resources\\imageBasedSearch\\FishHero.sikuli\\";
-
-		Pattern betRecordButton = new Pattern(imageFolderPath + "betRecordButton.png").similar(0.7);
-		Screen s = new Screen();
-
-		s.wait(betRecordButton, 10);
-		s.find(betRecordButton);
-		s.click(betRecordButton);
+		if (s.exists(betRecordButton) != null) {
+			s.wait(betRecordButton, 10);
+			s.find(betRecordButton);
+			s.click(betRecordButton);
+		} else {
+			fail = "betRecordButton failed";
+			rCreate.getExtentTest().fail(fail);
+		}
 	}
 }

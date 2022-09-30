@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite-CQ9SLots]" guice-stage="DEVELOPMENT">
-  <parameter name="pastDate" value="0"/>
-  <parameter name="slotsCategoryNumber" value="5"/>
+  <parameter name="slotsVendor" value="cq9"/>
   <parameter name="javaVersion" value="JDK/JSE 17"/>
   <parameter name="fishVendor" value="CQ9"/>
   <parameter name="vendorCQ9" value="CQ9"/>
   <parameter name="platform" value="Web"/>
   <parameter name="url" value="https://wltestmembersite.the777888.com"/>
+  <parameter name="fishCategoryNumber" value="5"/>
   <parameter name="numberOfGamesToTest" value="1"/>
   <parameter name="browser" value="Chrome"/>
   <parameter name="cq9Game3" value="欢乐捕鱼"/>
