@@ -2,25 +2,21 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-30T14:27:01 SGT" name="Suite-SGT" finished-at="2022-09-30T14:27:01 SGT" duration-ms="0">
-    <groups>
-    </groups>
-  </suite> <!-- Suite-SGT -->
-  <suite started-at="2022-09-30T14:25:12 SGT" name="Suite-CQ9SLots" finished-at="2022-09-30T14:27:01 SGT" duration-ms="109363">
+  <suite started-at="2022-09-30T15:43:08 SGT" name="Suite-BBINLive" finished-at="2022-09-30T15:44:27 SGT" duration-ms="78739">
     <groups>
       <group name="category">
-        <method signature="CQ9FishGame.selectCategory(java.lang.String)[pri:2, instance:runnerFish004.CQ9FishGame@5149f008]" name="selectCategory" class="runnerFish004.CQ9FishGame"/>
+        <method signature="BBINLiveGame.selectCategory(java.lang.String)[pri:2, instance:runnerLive003.BBINLiveGame@1b7cc17c]" name="selectCategory" class="runnerLive003.BBINLiveGame"/>
       </group> <!-- category -->
       <group name="login">
-        <method signature="CQ9FishGame.login(java.lang.String)[pri:1, instance:runnerFish004.CQ9FishGame@5149f008]" name="login" class="runnerFish004.CQ9FishGame"/>
+        <method signature="BBINLiveGame.login(java.lang.String)[pri:1, instance:runnerLive003.BBINLiveGame@1b7cc17c]" name="login" class="runnerLive003.BBINLiveGame"/>
       </group> <!-- login -->
       <group name="vendorAndGame">
-        <method signature="CQ9FishGame.selectCQ9VendorAndGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:3, instance:runnerFish004.CQ9FishGame@5149f008]" name="selectCQ9VendorAndGame" class="runnerFish004.CQ9FishGame"/>
+        <method signature="BBINLiveGame.selectBBINVendorAndGame(java.lang.String,java.lang.String)[pri:3, instance:runnerLive003.BBINLiveGame@1b7cc17c]" name="selectBBINVendorAndGame" class="runnerLive003.BBINLiveGame"/>
       </group> <!-- vendorAndGame -->
     </groups>
-    <test started-at="2022-09-30T14:25:12 SGT" name="CQ9SLots" finished-at="2022-09-30T14:27:01 SGT" duration-ms="109363">
-      <class name="runnerFish004.CQ9FishGame">
-        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:12 SGT" name="startReportAndSetProperty" finished-at="2022-09-30T14:25:14 SGT" duration-ms="2423" status="PASS">
+    <test started-at="2022-09-30T15:43:08 SGT" name="BBINLive" finished-at="2022-09-30T15:44:27 SGT" duration-ms="78739">
+      <class name="runnerLive003.BBINLiveGame">
+        <test-method is-config="true" signature="startReportAndSetProperty(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:runnerLive003.BBINLiveGame@1b7cc17c]" started-at="2022-09-30T15:43:08 SGT" name="startReportAndSetProperty" finished-at="2022-09-30T15:43:10 SGT" duration-ms="1662" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,7 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReportAndSetProperty -->
-        <test-method signature="goToSite(java.lang.String)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:14 SGT" name="goToSite" finished-at="2022-09-30T14:25:18 SGT" duration-ms="3596" status="PASS">
+        <test-method signature="goToSite(java.lang.String)[pri:0, instance:runnerLive003.BBINLiveGame@1b7cc17c]" started-at="2022-09-30T15:43:10 SGT" name="goToSite" finished-at="2022-09-30T15:43:13 SGT" duration-ms="2960" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -57,18 +53,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToSite -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:18 SGT" name="logCaseStatus" finished-at="2022-09-30T14:25:18 SGT" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerLive003.BBINLiveGame@1b7cc17c]" started-at="2022-09-30T15:43:13 SGT" name="logCaseStatus" finished-at="2022-09-30T15:43:13 SGT" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=goToSite status=SUCCESS method=CQ9FishGame.goToSite(java.lang.String)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008] output={null}]]]>
+                <![CDATA[[TestResult name=goToSite status=SUCCESS method=BBINLiveGame.goToSite(java.lang.String)[pri:0, instance:runnerLive003.BBINLiveGame@1b7cc17c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="login(java.lang.String)[pri:1, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:18 SGT" name="login" finished-at="2022-09-30T14:25:24 SGT" duration-ms="5565" status="PASS">
+        <test-method signature="login(java.lang.String)[pri:1, instance:runnerLive003.BBINLiveGame@1b7cc17c]" started-at="2022-09-30T15:43:13 SGT" name="login" finished-at="2022-09-30T15:43:19 SGT" duration-ms="5642" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -79,86 +75,71 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:24 SGT" name="logCaseStatus" finished-at="2022-09-30T14:25:24 SGT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerLive003.BBINLiveGame@1b7cc17c]" started-at="2022-09-30T15:43:19 SGT" name="logCaseStatus" finished-at="2022-09-30T15:43:19 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=CQ9FishGame.login(java.lang.String)[pri:1, instance:runnerFish004.CQ9FishGame@5149f008] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=BBINLiveGame.login(java.lang.String)[pri:1, instance:runnerLive003.BBINLiveGame@1b7cc17c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="selectCategory(java.lang.String)[pri:2, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:24 SGT" name="selectCategory" finished-at="2022-09-30T14:25:25 SGT" duration-ms="1543" status="PASS">
+        <test-method signature="selectCategory(java.lang.String)[pri:2, instance:runnerLive003.BBINLiveGame@1b7cc17c]" started-at="2022-09-30T15:43:19 SGT" name="selectCategory" finished-at="2022-09-30T15:43:20 SGT" duration-ms="1533" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[5]]>
+                <![CDATA[4]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectCategory -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:25 SGT" name="logCaseStatus" finished-at="2022-09-30T14:25:25 SGT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerLive003.BBINLiveGame@1b7cc17c]" started-at="2022-09-30T15:43:20 SGT" name="logCaseStatus" finished-at="2022-09-30T15:43:20 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=selectCategory status=SUCCESS method=CQ9FishGame.selectCategory(java.lang.String)[pri:2, instance:runnerFish004.CQ9FishGame@5149f008] output={null}]]]>
+                <![CDATA[[TestResult name=selectCategory status=SUCCESS method=BBINLiveGame.selectCategory(java.lang.String)[pri:2, instance:runnerLive003.BBINLiveGame@1b7cc17c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="selectCQ9VendorAndGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:3, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:25:25 SGT" name="selectCQ9VendorAndGame" finished-at="2022-09-30T14:27:00 SGT" duration-ms="94394" status="PASS">
+        <test-method signature="selectBBINVendorAndGame(java.lang.String,java.lang.String)[pri:3, instance:runnerLive003.BBINLiveGame@1b7cc17c]" started-at="2022-09-30T15:43:20 SGT" name="selectBBINVendorAndGame" finished-at="2022-09-30T15:44:25 SGT" duration-ms="65377" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[CQ9]]>
+                <![CDATA[bbin]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[CQ9]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[英雄捕鱼]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[一炮捕鱼]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[1]]>
+                <![CDATA[BBIN]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectCQ9VendorAndGame -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:27:00 SGT" name="logCaseStatus" finished-at="2022-09-30T14:27:00 SGT" duration-ms="1" status="PASS">
+        </test-method> <!-- selectBBINVendorAndGame -->
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:runnerLive003.BBINLiveGame@1b7cc17c]" started-at="2022-09-30T15:44:25 SGT" name="logCaseStatus" finished-at="2022-09-30T15:44:25 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=selectCQ9VendorAndGame status=SUCCESS method=CQ9FishGame.selectCQ9VendorAndGame(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int)[pri:3, instance:runnerFish004.CQ9FishGame@5149f008] output={null}]]]>
+                <![CDATA[[TestResult name=selectBBINVendorAndGame status=SUCCESS method=BBINLiveGame.selectBBINVendorAndGame(java.lang.String,java.lang.String)[pri:3, instance:runnerLive003.BBINLiveGame@1b7cc17c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method is-config="true" signature="stopDriver()[pri:0, instance:runnerFish004.CQ9FishGame@5149f008]" started-at="2022-09-30T14:27:00 SGT" name="stopDriver" finished-at="2022-09-30T14:27:01 SGT" duration-ms="1765" status="PASS">
+        <test-method is-config="true" signature="stopDriver()[pri:0, instance:runnerLive003.BBINLiveGame@1b7cc17c]" started-at="2022-09-30T15:44:25 SGT" name="stopDriver" finished-at="2022-09-30T15:44:27 SGT" duration-ms="1524" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopDriver -->
-      </class> <!-- runnerFish004.CQ9FishGame -->
-    </test> <!-- CQ9SLots -->
-  </suite> <!-- Suite-CQ9SLots -->
+      </class> <!-- runnerLive003.BBINLiveGame -->
+    </test> <!-- BBINLive -->
+  </suite> <!-- Suite-BBINLive -->
 </testng-results>

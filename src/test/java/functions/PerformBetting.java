@@ -208,4 +208,71 @@ public class PerformBetting extends VariableContainer {
 			rCreate.getExtentTest().fail(fail);
 		}
 	}
+	
+	public void doLiveBBINBet() throws FindFailed, InterruptedException {
+		String imageFilePath = userDir + "\\src\\test\\resources\\images\\liveBBIN.sikuli\\";
+
+		Pattern saveButton = new Pattern(imageFilePath + "saveButton.png");
+		Pattern noBetAllowed = new Pattern(imageFilePath + "noBetAllowed.png");
+		Pattern betAmount = new Pattern(imageFilePath + "betAmount.png");
+		Pattern betPosition = new Pattern(imageFilePath + "betPosition.png");
+		Pattern confirmBetButton = new Pattern(imageFilePath + "confirmBetButton.png");
+		Pattern betRecordButton = new Pattern(imageFilePath + "betRecordButton.png");
+
+		Screen s = new Screen(0);
+		
+		if (s.exists(saveButton) != null) {
+			s.wait(saveButton, 10);
+			s.find(saveButton);
+			s.click(saveButton);
+		} else {
+			skip = "saveButton skipped";
+			rCreate.getExtentTest().skip(skip);
+		}
+		
+		if (s.exists(betAmount) != null) {
+			s.wait(betAmount, 10);
+			s.find(betAmount);
+			s.click(betAmount);
+		} else {
+			fail = "betAmount failed";
+			rCreate.getExtentTest().fail(fail);
+		}
+		
+		if(s.exists(noBetAllowed) != null) {
+			Thread.sleep(15000);
+		} else {
+			skip = "noBetAllowed skipped";
+			rCreate.getExtentTest().skip(skip);
+		}
+		
+		if (s.exists(betPosition) != null) {
+			s.wait(betPosition, 10);
+			s.find(betPosition);
+			s.click(betPosition);
+		} else {
+			fail = "betPosition failed";
+			rCreate.getExtentTest().fail(fail);
+		}
+
+		if (s.exists(confirmBetButton) != null) {
+			s.wait(confirmBetButton, 10);
+			s.find(confirmBetButton);
+			s.click(confirmBetButton);
+		} else {
+			fail = "confirmBetButton failed";
+			rCreate.getExtentTest().fail(fail);
+		}
+
+		Thread.sleep(20000);
+
+		if (s.exists(betRecordButton) != null) {
+			s.wait(betRecordButton, 10);
+			s.find(betRecordButton);
+			s.click(betRecordButton);
+		} else {
+			fail = "betRecordButton failed";
+			rCreate.getExtentTest().fail(fail);
+		}
+	}
 }

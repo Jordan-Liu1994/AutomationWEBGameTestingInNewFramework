@@ -155,4 +155,77 @@ public class CategoryVendorAndGame extends VariableContainer {
 			}
 		}
 	}
+
+	String parentWindow;
+	
+	public void selectLiveVendors(String vendorName) throws FailedLoginException {
+		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		WebElement selectLiveVendors = bDriver.getDriver().findElement(By.xpath("//div[@class='more_game_item']//div//div[contains(text(),'" + vendorName + "')]"));
+		parentWindow = bDriver.getDriver().getWindowHandle();
+		
+		if (selectLiveVendors.isDisplayed()) {
+			String selectLiveVendorsText = selectLiveVendors.getText();
+			Actions builder = new Actions(bDriver.getDriver());
+			builder.moveToElement(selectLiveVendors).click().build().perform();
+			rCreate.getExtentTest().info("Clicked " + selectLiveVendorsText);
+		} else {
+			fail = "selectLiveVendors failed";
+			rCreate.getExtentTest().fail(fail);
+		}
+	}
+	
+	public void selectLiveBBINGame() throws FailedLoginException, InterruptedException {
+		iterateNW.iterateToGameWindow();
+		iterateNW.maximizeWindow();
+		Thread.sleep(5000);
+		
+		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		WebElement selectLiveBBINGame = bDriver.getDriver().findElement(By.xpath("//a[@class='nav-btn cur-btn']"));
+
+		if (selectLiveBBINGame.isDisplayed()) {
+			Actions builder = new Actions(bDriver.getDriver());
+			builder.moveToElement(selectLiveBBINGame).build().perform();
+			rCreate.getExtentTest().info("Hovered over 21 black jack");
+		} else {
+			fail = "selectLiveBBINGame failed";
+			rCreate.getExtentTest().fail(fail);
+		}
+	}
+	
+	public void selectLiveBBINGameOption() throws FailedLoginException, InterruptedException {
+		bDriver.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		WebElement selectLiveBBINGameOption = bDriver.getDriver().findElement(By.xpath("(//img[@role='presentation'])[4]"));
+		
+		if (selectLiveBBINGameOption.isDisplayed()) {
+			Actions builder = new Actions(bDriver.getDriver());
+			builder.moveToElement(selectLiveBBINGameOption).build().perform();
+			rCreate.getExtentTest().info("Hovered over game option");
+		} else {
+			fail = "selectLiveBBINGameOption failed";
+			rCreate.getExtentTest().fail(fail);
+		}
+		
+		WebElement selectLiveBBINGameOptionChoice = bDriver.getDriver().findElement(By.xpath("(//a[@role='button'][normalize-space()='A'])[1]"));
+		
+		if (selectLiveBBINGameOptionChoice.isDisplayed()) {
+			Actions builder = new Actions(bDriver.getDriver());
+			builder.moveToElement(selectLiveBBINGameOptionChoice).click().build().perform();
+			rCreate.getExtentTest().info("Hovered over game option choice");
+		} else {
+			fail = "selectLiveBBINGameOptionChoice failed";
+			rCreate.getExtentTest().fail(fail);
+		}
+
+	}
+	
+	public void selectLiveBBINPlaceABet(String vendorName) throws Exception {
+		iterateNW.iterateToBetRecordWindow();
+		iterateNW.maximizeWindow();
+		Thread.sleep(15000);
+		performB.doLiveBBINBet();
+		Thread.sleep(2500);
+		iterateNW.iterateToBetDetailsWindow();
+		iterateNW.screenShotFinalWindow(vendorName);
+		iterateNW.closeNewWindow();
+	}
 }
