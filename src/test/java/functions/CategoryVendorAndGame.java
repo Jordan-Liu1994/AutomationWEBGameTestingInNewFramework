@@ -150,7 +150,7 @@ public class CategoryVendorAndGame extends VariableContainer {
 				Thread.sleep(2500);
 				iterateNW.backToMainWindow(parentWindow);
 			} else {
-				fail = "selectSlotsGame failed";
+				fail = "selectFishGame failed";
 				rCreate.getExtentTest().fail(fail);
 			}
 		}

@@ -13,6 +13,8 @@
 	<!-- This is the index of the category, might change depending on position 
 		arrangement of categories -->
 	<parameter name="slotsCategoryNumber" value="3"></parameter>
+
+	<!-- value starts from 0, so 0, 1 = 2 runs = 2 games -->
 	<parameter name="numberOfGamesToTest" value="1"></parameter>
 
 	<!-- IMPORTANT -->
