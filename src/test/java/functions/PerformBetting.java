@@ -120,7 +120,7 @@ public class PerformBetting extends VariableContainer {
 		}
 
 		Thread.sleep(5000);
-		
+
 		if (s.exists(settingButton) != null) {
 			s.wait(settingButton, 10);
 			s.find(settingButton);
@@ -139,7 +139,7 @@ public class PerformBetting extends VariableContainer {
 			rCreate.getExtentTest().fail(fail);
 		}
 	}
-	
+
 	public void doCanonFishBet() throws FindFailed, InterruptedException {
 		String imageFilePath = userDir + "\\src\\test\\resources\\images\\canonFish.sikuli\\";
 
@@ -160,7 +160,7 @@ public class PerformBetting extends VariableContainer {
 			fail = "closeTutorialButton failed";
 			rCreate.getExtentTest().fail(fail);
 		}
-		
+
 		if (s.exists(canonFishGameOption) != null) {
 			s.wait(canonFishGameOption, 10);
 			s.find(canonFishGameOption);
@@ -169,7 +169,7 @@ public class PerformBetting extends VariableContainer {
 			fail = "heroFishGameOption failed";
 			rCreate.getExtentTest().fail(fail);
 		}
-		
+
 		if (s.exists(closeTutorialButton2) != null) {
 			s.wait(closeTutorialButton2, 10);
 			s.find(closeTutorialButton2);
@@ -189,7 +189,7 @@ public class PerformBetting extends VariableContainer {
 		}
 
 		Thread.sleep(5000);
-		
+
 		if (s.exists(settingButton) != null) {
 			s.wait(settingButton, 10);
 			s.find(settingButton);
@@ -208,19 +208,21 @@ public class PerformBetting extends VariableContainer {
 			rCreate.getExtentTest().fail(fail);
 		}
 	}
-	
+
 	public void doLiveBBINBet() throws FindFailed, InterruptedException {
 		String imageFilePath = userDir + "\\src\\test\\resources\\images\\liveBBIN.sikuli\\";
 
 		Pattern saveButton = new Pattern(imageFilePath + "saveButton.png");
 		Pattern noBetAllowed = new Pattern(imageFilePath + "noBetAllowed.png");
+		Pattern pleaseBetAnnouncement = new Pattern(imageFilePath + "pleaseBetAnnouncement.png");
+		Pattern waitForNextBet = new Pattern(imageFilePath + "waitForNextBet.png");
 		Pattern betAmount = new Pattern(imageFilePath + "betAmount.png");
 		Pattern betPosition = new Pattern(imageFilePath + "betPosition.png");
 		Pattern confirmBetButton = new Pattern(imageFilePath + "confirmBetButton.png");
 		Pattern betRecordButton = new Pattern(imageFilePath + "betRecordButton.png");
 
 		Screen s = new Screen(0);
-		
+
 		if (s.exists(saveButton) != null) {
 			s.wait(saveButton, 10);
 			s.find(saveButton);
@@ -229,25 +231,21 @@ public class PerformBetting extends VariableContainer {
 			skip = "saveButton skipped";
 			rCreate.getExtentTest().skip(skip);
 		}
-		
+
 		if (s.exists(betAmount) != null) {
-			s.wait(betAmount, 10);
+			s.wait(betAmount, 5);
 			s.find(betAmount);
 			s.click(betAmount);
 		} else {
 			fail = "betAmount failed";
 			rCreate.getExtentTest().fail(fail);
 		}
-		
-		if(s.exists(noBetAllowed) != null) {
-			Thread.sleep(15000);
-		} else {
-			skip = "noBetAllowed skipped";
-			rCreate.getExtentTest().skip(skip);
-		}
-		
+
+		s.wait(pleaseBetAnnouncement, 20);
+		s.find(pleaseBetAnnouncement);
+
 		if (s.exists(betPosition) != null) {
-			s.wait(betPosition, 10);
+			s.wait(betPosition, 5);
 			s.find(betPosition);
 			s.click(betPosition);
 		} else {

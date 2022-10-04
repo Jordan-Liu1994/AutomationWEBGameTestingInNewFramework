@@ -5,3 +5,4 @@
 "pleaseBetAnnouncement.png"
 "noBetAllowed.png"
 "betAmount.png"
+"waitForNextBet.png"
